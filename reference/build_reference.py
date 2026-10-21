@@ -1,18 +1,4 @@
 #!/usr/bin/env python3
-"""Step 1 of TD 1: run the twenty reference queries on the read-only base and
-write reference-td1.csv. No model is involved: every query below was written by
-hand from the conventions of the protocol (section 1).
-
-    python3 reference/build_reference.py            # writes reference-td1.csv
-    python3 reference/independent_check.py          # recomputes every value from the CSV files
-
-Conventions applied:
-- period "from S to E": o.date >= S AND o.date < E (text comparison, same format);
-- completed age on D: year(D) - year(B) - (mm-dd of D < mm-dd of B), so a
-  customer born on 2001-09-25 is 25 on 2026-09-25 and 24 on 2026-09-24;
-- "at the time of the order": D is the calendar day of the order line;
-- revenue: SUM(quantity_product * price) in cents excl. VAT, COALESCE(..., 0).
-"""
 import csv
 import sqlite3
 from pathlib import Path
@@ -27,7 +13,6 @@ CUSTOMER = " JOIN customers c ON c.customer_id = o.customer_id"
 
 
 def age_on(day: str) -> str:
-    """Completed age of customer c on `day` (a SQL expression yielding 'YYYY-MM-DD')."""
     return (f"(CAST(strftime('%Y', {day}) AS INTEGER) - CAST(strftime('%Y', c.birth_date) AS INTEGER)"
             f" - (strftime('%m-%d', {day}) < strftime('%m-%d', c.birth_date)))")
 
@@ -50,8 +35,6 @@ def query(*conditions: str, customer: bool = False) -> str:
 AGE_0925 = f"{age_on(chr(39) + '2026-09-25' + chr(39))} = 25"
 AGE_AT_ORDER = f"{age_on('substr(o.date, 1, 10)')} = 25"
 
-# case_id -> query. Who wrote and who cross-checked each query is recorded in the
-# written_by / checked_by columns of reference-td1.csv (left empty until filled).
 REFERENCES = {
     "C01": query(period("2026-03-01 00:00:00", "2026-06-01 00:00:00")),
     "C02": query(AGE_0925, customer=True),

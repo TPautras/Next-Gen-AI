@@ -1,16 +1,4 @@
 #!/usr/bin/env python3
-"""TD 1 step 2-3: merge the operators' raw CSVs into traces-td1.csv (one header,
-every attempt kept, chronological), then derive from it:
-
-- model-question-comparison-en.csv: one final row per model/question (last
-  attempt), explanation taken from td1/explanations.json (hand-written after
-  reading the SQL and error fields of each failing cell);
-- td1/pivot-models-x-questions.md: the models x questions view of that CSV;
-- td1/family-results.json: correct/evaluated per question family, used in
-  five-model-summary-en.csv.
-
-    python3 td1/build_summaries.py
-"""
 import csv
 import json
 from pathlib import Path
@@ -32,7 +20,7 @@ def main() -> int:
     rows, source = [], {}
     for member in MEMBERS:
         path = ROOT / "traces" / f"traces-{member}.csv"
-        for index, row in enumerate(read_csv(path), start=2):        # line 1 is the header
+        for index, row in enumerate(read_csv(path), start=2):
             rows.append(row)
             source[id(row)] = f"traces/traces-{member}.csv:{index}"
     rows.sort(key=lambda r: (r["date_utc"], r["cell_id"], int(r["attempts"])))
@@ -75,7 +63,6 @@ def main() -> int:
         writer.writeheader()
         writer.writerows(comparison)
 
-    # Pivot view: models as rows, questions as columns, status as the value.
     mark = {"correct": "ok", "incorrect": "WRONG", "sql_invalid": "invalid", "sql_rejected": "rejected",
             "access_error": "access", "not_executed": "not run"}
     cases = sorted(questions)

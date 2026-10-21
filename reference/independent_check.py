@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""Independent check of reference-td1.csv: recompute every value from the CSV
-files with plain Python (no SQL, no model) and compare.
-
-The age logic is written differently from the SQL on purpose: the 25th
-anniversary is built as a real date and compared with the day, instead of
-comparing 'mm-dd' strings. Exit code 0 when all twenty values agree.
-"""
 import csv
 from datetime import date
 from pathlib import Path
@@ -27,7 +20,7 @@ LINES = read("orders.csv")
 def anniversary(birth: date, years: int) -> date:
     try:
         return birth.replace(year=birth.year + years)
-    except ValueError:                      # 29 February in a non-leap year: anniversary on 1 March
+    except ValueError:
         return date(birth.year + years, 3, 1)
 
 
