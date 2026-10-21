@@ -4,7 +4,7 @@ This is the repository of one sub-group for the three lab sessions of the module
 
 | | |
 |---|---|
-| Sub-group | Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc |
+| Sub-group | Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne--Welnovski, Arthur Belloc, Anne-Marie Faye, Lucas Gerzes |
 | Members | Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc (four members; protocol roles A to G shared, see `contributions.csv`) |
 | Pack version | 2026-10-18-students-1 (kit of 14 October 2026, models of `modeles-autorises.json` dated 2026-10-14) |
 | Database | `data/boutique.sqlite`, SHA-256 `0077e235adc2ca647b484e3083c98a6d7cae3ef3655ce366a299caf13398fec2`, identical to `data/manifest.json` (seed 20260925) |
