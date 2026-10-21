@@ -1,0 +1,7 @@
+cell_id,provider,model_requested,model_returned,case_id,question,prompt_sha256,sql,value,reference,verdict,verdict_detail,http_status,error,latency_ms,tokens_prompt,tokens_completion,tokens_reasoning,cost_native,attempts,date_utc,nature
+groq:openai/gpt-oss-120b:C10,groq,openai/gpt-oss-120b,openai/gpt-oss-120b,C10,"What is the total revenue excluding VAT, in euro cents, of the orders placed by customers who were exactly 25 years old at the time of the order?",bf06c7f2b73ebaad7deca36db05e5d26b7de0e2e97fbf7f829b3471f2b256aca,"SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN product p ON o.product_id = p.product_id
+WHERE date(o.date) >= date(c.birth_date, '+25 years')
+  AND date(o.date) < date(c.birth_date, '+26 years');",558980,558980,correct,,200,,537.7,626,196,107,,1,2026-10-21 09:52:35,replay

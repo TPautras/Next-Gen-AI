@@ -1,0 +1,29 @@
+{
+ "case": "C10",
+ "nature": "real",
+ "reference_cents": 558980,
+ "five_model_values": {
+  "openai/gpt-oss-120b": "558980",
+  "openai/gpt-oss-20b": "558980",
+  "cohere/north-mini-code:free": "0",
+  "qwen/qwen3.8-27b": "119410",
+  "dots-studio/dots-3-note-preview:free": "119410"
+ },
+ "queries": {
+  "reference": {
+   "shop_value": 558980,
+   "fixture_value": 1100,
+   "fixture_expected": 1100
+  },
+  "qwen/qwen3.8-27b": {
+   "shop_value": 119410,
+   "fixture_value": 100,
+   "fixture_expected": 1100
+  },
+  "dots-studio/dots-3-note-preview:free": {
+   "shop_value": 119410,
+   "fixture_value": 100,
+   "fixture_expected": 1100
+  }
+ }
+}

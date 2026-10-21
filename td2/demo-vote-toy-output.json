@@ -1,0 +1,18 @@
+{
+ "case": "DEMO-VOTE",
+ "nature": "simulation",
+ "strict_variant": 0,
+ "closed_variant": 100,
+ "reference": 100,
+ "panel_k_of_n": "2-of-3",
+ "decision": {
+  "consensus": true,
+  "value": 0,
+  "votes": 2,
+  "models": [
+   "groq:openai/gpt-oss-120b",
+   "openrouter:cohere/north-mini-code:free"
+  ]
+ },
+ "matches_reference": false
+}

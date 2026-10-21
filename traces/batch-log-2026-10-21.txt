@@ -1,0 +1,139 @@
+=== A groq:openai/gpt-oss-120b
+  [correct     ] groq:openai/gpt-oss-120b                             value=   792800 reference=   792800     654 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   590320 reference=   590320    1294 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   936350 reference=   936350     660 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=  2826250 reference=  2826250     502 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=    38480 reference=    38480     614 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=        0 reference=        0     372 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=    13970 reference=    13970     789 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   605580 reference=   605580    1367 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   487980 reference=   487980    1434 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   558980 reference=   558980     538 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   446690 reference=   446690    1502 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=  1666490 reference=  1666490     561 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   107740 reference=   107740     594 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=        0 reference=        0     874 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   168680 reference=   168680    1263 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   376740 reference=   376740    1276 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=   258180 reference=   258180    1092 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=    62480 reference=    62480    2817 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=     1990 reference=     1990    1256 ms  
+  [correct     ] groq:openai/gpt-oss-120b                             value=  1106090 reference=  1106090     616 ms  
+
+Traces: 20 line(s) in traces/state-A.jsonl, all attempts exported to traces/traces-A.csv
+
+model                                                nature     cases  run  correct invalid rejected not run   accuracy
+-----------------------------------------------------------------------------------------------------------------------
+groq:openai/gpt-oss-120b                             real          20   20       20       0        0       0   20/20 cases (100.0%)
+=== B groq:openai/gpt-oss-20b
+  [correct     ] groq:openai/gpt-oss-20b                              value=   792800 reference=   792800     550 ms  
+  [incorrect   ] groq:openai/gpt-oss-20b                              value=   321340 reference=   590320     579 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=   936350 reference=   936350     286 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=  2826250 reference=  2826250     537 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=    38480 reference=    38480     559 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=        0 reference=        0     607 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=    13970 reference=    13970     345 ms  
+  [incorrect   ] groq:openai/gpt-oss-20b                              value=    25920 reference=   605580     612 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=   487980 reference=   487980    1309 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=   558980 reference=   558980     713 ms  
+  [incorrect   ] groq:openai/gpt-oss-20b                              value=   322160 reference=   446690     885 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=  1666490 reference=  1666490     421 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=   107740 reference=   107740     653 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=        0 reference=        0     478 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=   168680 reference=   168680     635 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=   376740 reference=   376740     598 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=   258180 reference=   258180    1152 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=    62480 reference=    62480     474 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=     1990 reference=     1990    1488 ms  
+  [correct     ] groq:openai/gpt-oss-20b                              value=  1106090 reference=  1106090     350 ms  
+
+Traces: 20 line(s) in traces/state-B.jsonl, all attempts exported to traces/traces-B.csv
+
+model                                                nature     cases  run  correct invalid rejected not run   accuracy
+-----------------------------------------------------------------------------------------------------------------------
+groq:openai/gpt-oss-20b                              real          20   20       17       0        0       0   17/20 cases (85.0%)
+=== C openrouter:cohere/north-mini-code:free
+  [correct     ] openrouter:cohere/north-mini-code:free               value=   792800 reference=   792800    2023 ms  
+  [incorrect   ] openrouter:cohere/north-mini-code:free               value=        0 reference=   590320    3385 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=   936350 reference=   936350    2200 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=  2826250 reference=  2826250    1874 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=    38480 reference=    38480    3646 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=        0 reference=        0    1481 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=    13970 reference=    13970    1084 ms  
+  [incorrect   ] openrouter:cohere/north-mini-code:free               value=  1553040 reference=   605580    2872 ms  
+  [incorrect   ] openrouter:cohere/north-mini-code:free               value=        0 reference=   487980    2100 ms  
+  [incorrect   ] openrouter:cohere/north-mini-code:free               value=        0 reference=   558980    2648 ms  
+  [incorrect   ] openrouter:cohere/north-mini-code:free               value=        0 reference=   446690    1227 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=  1666490 reference=  1666490    3196 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=   107740 reference=   107740    1827 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=        0 reference=        0    1693 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=   168680 reference=   168680    8694 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=   376740 reference=   376740    1153 ms  
+  [incorrect   ] openrouter:cohere/north-mini-code:free               value=   197080 reference=   258180    5828 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=    62480 reference=    62480    1853 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=     1990 reference=     1990    3350 ms  
+  [correct     ] openrouter:cohere/north-mini-code:free               value=  1106090 reference=  1106090    1001 ms  
+
+Traces: 20 line(s) in traces/state-C.jsonl, all attempts exported to traces/traces-C.csv
+
+model                                                nature     cases  run  correct invalid rejected not run   accuracy
+-----------------------------------------------------------------------------------------------------------------------
+openrouter:cohere/north-mini-code:free               real          20   20       14       0        0       0   14/20 cases (70.0%)
+=== D groq:qwen/qwen3.8-27b
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   792800 reference=   792800     355 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   590320 reference=   590320     378 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   936350 reference=   936350     364 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=  2826250 reference=  2826250     311 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=    38480 reference=    38480     330 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=        0 reference=        0     303 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=    13970 reference=    13970     316 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   605580 reference=   605580     408 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   487980 reference=   487980     406 ms  
+  [incorrect   ] groq:qwen/qwen3.8-27b                                value=   119410 reference=   558980     499 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   446690 reference=   446690     455 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=  1666490 reference=  1666490     233 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   107740 reference=   107740     510 ms  
+  [correct     ] groq:qwen/qwen3.8-27b                                value=        0 reference=        0     401 ms  
+  [incorrect   ] groq:qwen/qwen3.8-27b                                value=        0 reference=   168680     751 ms  
+  [not_executed] groq:qwen/qwen3.8-27b                                value=        - reference=   376740      49 ms  HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5c71m6festbf3q27m0t2tmj` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 950, Requested 186. Pleas
+  [correct     ] groq:qwen/qwen3.8-27b                                value=   376740 reference=   376740     499 ms  
+  [not_executed] groq:qwen/qwen3.8-27b                                value=        - reference=   258180      61 ms  HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5c71m6festbf3q27m0t2tmj` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 916, Requested 175. Pleas
+  [not_executed] groq:qwen/qwen3.8-27b                                value=        - reference=   258180      47 ms  HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5c71m6festbf3q27m0t2tmj` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 816, Requested 186. Pleas
+  [correct     ] groq:qwen/qwen3.8-27b                                value=    62480 reference=    62480     575 ms  
+  [not_executed] groq:qwen/qwen3.8-27b                                value=        - reference=     1990      54 ms  HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5c71m6festbf3q27m0t2tmj` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 918, Requested 175. Pleas
+  [incorrect   ] groq:qwen/qwen3.8-27b                                value=    83580 reference=     1990     601 ms  
+  [not_executed] groq:qwen/qwen3.8-27b                                value=        - reference=  1106090      50 ms  HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5c71m6festbf3q27m0t2tmj` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 950, Requested 233. Pleas
+  [correct     ] groq:qwen/qwen3.8-27b                                value=  1106090 reference=  1106090     370 ms  
+
+Traces: 24 line(s) in traces/state-D.jsonl, all attempts exported to traces/traces-D.csv
+
+model                                                nature     cases  run  correct invalid rejected not run   accuracy
+-----------------------------------------------------------------------------------------------------------------------
+groq:qwen/qwen3.8-27b                                real          20   19       16       0        0       1   16/20 cases (80.0%)
+=== E openrouter:dots-studio/dots-3-note-preview:free
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=   792800 reference=   792800    2428 ms  
+  [incorrect   ] openrouter:dots-studio/dots-3-note-preview:free      value=   135000 reference=   590320    2978 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=   936350 reference=   936350    2253 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=  2826250 reference=  2826250    2307 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=    38480 reference=    38480    2353 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=        0 reference=        0    2264 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=    13970 reference=    13970    2117 ms  
+  [incorrect   ] openrouter:dots-studio/dots-3-note-preview:free      value=   186340 reference=   605580    3597 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=   487980 reference=   487980    4166 ms  
+  [incorrect   ] openrouter:dots-studio/dots-3-note-preview:free      value=   119410 reference=   558980    3998 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=   446690 reference=   446690    3880 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=  1666490 reference=  1666490    1655 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=   107740 reference=   107740    2500 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=        0 reference=        0    2785 ms  
+  [incorrect   ] openrouter:dots-studio/dots-3-note-preview:free      value=   138920 reference=   168680    5127 ms  
+  [incorrect   ] openrouter:dots-studio/dots-3-note-preview:free      value=   211260 reference=   376740    2977 ms  
+  [incorrect   ] openrouter:dots-studio/dots-3-note-preview:free      value=   152730 reference=   258180    3134 ms  
+  [incorrect   ] openrouter:dots-studio/dots-3-note-preview:free      value=    39580 reference=    62480    3774 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=     1990 reference=     1990    3373 ms  
+  [correct     ] openrouter:dots-studio/dots-3-note-preview:free      value=  1106090 reference=  1106090    3005 ms  
+
+Traces: 20 line(s) in traces/state-E.jsonl, all attempts exported to traces/traces-E.csv
+
+model                                                nature     cases  run  correct invalid rejected not run   accuracy
+-----------------------------------------------------------------------------------------------------------------------
+openrouter:dots-studio/dots-3-note-preview:free      real          20   20       13       0        0       0   13/20 cases (65.0%)

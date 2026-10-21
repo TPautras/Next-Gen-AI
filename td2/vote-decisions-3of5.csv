@@ -1,0 +1,21 @@
+case_id,nature,panel_k_of_n,decision,value_cents,votes,agreeing_models,reference_cents,matches_reference
+C01,real,3-of-5,consensus,792800,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,792800,yes
+C02,real,3-of-5,abstention,,2,,590320,n/a (abstained)
+C03,real,3-of-5,consensus,936350,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,936350,yes
+C04,real,3-of-5,consensus,2826250,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,2826250,yes
+C05,real,3-of-5,consensus,38480,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,38480,yes
+C06,real,3-of-5,consensus,0,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,0,yes
+C07,real,3-of-5,consensus,13970,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,13970,yes
+C08,real,3-of-5,abstention,,2,,605580,n/a (abstained)
+C09,real,3-of-5,consensus,487980,4,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,487980,yes
+C10,real,3-of-5,abstention,,2,,558980,n/a (abstained)
+C11,real,3-of-5,consensus,446690,3,groq:openai/gpt-oss-120b groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,446690,yes
+C12,real,3-of-5,consensus,1666490,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,1666490,yes
+C13,real,3-of-5,consensus,107740,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,107740,yes
+C14,real,3-of-5,consensus,0,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,0,yes
+C15,real,3-of-5,consensus,168680,3,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free,168680,yes
+C16,real,3-of-5,consensus,376740,4,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,376740,yes
+C17,real,3-of-5,abstention,,2,,258180,n/a (abstained)
+C18,real,3-of-5,consensus,62480,4,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,62480,yes
+C19,real,3-of-5,consensus,1990,4,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free openrouter:dots-studio/dots-3-note-preview:free,1990,yes
+C20,real,3-of-5,consensus,1106090,5,groq:openai/gpt-oss-120b groq:openai/gpt-oss-20b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b openrouter:dots-studio/dots-3-note-preview:free,1106090,yes

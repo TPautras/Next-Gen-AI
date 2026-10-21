@@ -1,0 +1,21 @@
+case_id,nature,panel_k_of_n,decision,value_cents,votes,agreeing_models,reference_cents,matches_reference
+C01,real,2-of-3,consensus,792800,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,792800,yes
+C02,real,2-of-3,consensus,590320,2,groq:openai/gpt-oss-120b groq:qwen/qwen3.8-27b,590320,yes
+C03,real,2-of-3,consensus,936350,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,936350,yes
+C04,real,2-of-3,consensus,2826250,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,2826250,yes
+C05,real,2-of-3,consensus,38480,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,38480,yes
+C06,real,2-of-3,consensus,0,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,0,yes
+C07,real,2-of-3,consensus,13970,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,13970,yes
+C08,real,2-of-3,consensus,605580,2,groq:openai/gpt-oss-120b groq:qwen/qwen3.8-27b,605580,yes
+C09,real,2-of-3,consensus,487980,2,groq:openai/gpt-oss-120b groq:qwen/qwen3.8-27b,487980,yes
+C10,real,2-of-3,abstention,,1,,558980,n/a (abstained)
+C11,real,2-of-3,consensus,446690,2,groq:openai/gpt-oss-120b groq:qwen/qwen3.8-27b,446690,yes
+C12,real,2-of-3,consensus,1666490,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,1666490,yes
+C13,real,2-of-3,consensus,107740,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,107740,yes
+C14,real,2-of-3,consensus,0,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,0,yes
+C15,real,2-of-3,consensus,168680,2,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free,168680,yes
+C16,real,2-of-3,consensus,376740,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,376740,yes
+C17,real,2-of-3,abstention,,1,,258180,n/a (abstained)
+C18,real,2-of-3,consensus,62480,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,62480,yes
+C19,real,2-of-3,consensus,1990,2,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free,1990,yes
+C20,real,2-of-3,consensus,1106090,3,groq:openai/gpt-oss-120b openrouter:cohere/north-mini-code:free groq:qwen/qwen3.8-27b,1106090,yes

@@ -1,0 +1,4 @@
+{"example": "agreement", "nature": "simulation", "n": 3, "k": 2, "decision": {"consensus": true, "value": 100, "votes": 2, "models": ["groq:openai/gpt-oss-120b", "openrouter:cohere/north-mini-code:free"]}, "reference": 100, "matches_reference": true}
+{"example": "disagreement", "nature": "simulation", "n": 3, "k": 2, "decision": {"consensus": false, "value": null, "votes": 1, "models": []}, "reference": 100, "matches_reference": null}
+{"example": "unavailable", "nature": "simulation", "n": 3, "k": 2, "decision": {"consensus": false, "value": null, "votes": 1, "models": []}, "reference": 100, "matches_reference": null}
+{"example": "wrong consensus", "nature": "simulation", "n": 3, "k": 2, "decision": {"consensus": true, "value": 0, "votes": 2, "models": ["groq:openai/gpt-oss-120b", "openrouter:cohere/north-mini-code:free"]}, "reference": 100, "matches_reference": false}

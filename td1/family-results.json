@@ -1,0 +1,476 @@
+{
+ "openai/gpt-oss-120b": {
+  "period": {
+   "correct": 10,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C15",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "age": {
+   "correct": 10,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C02",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "product": {
+   "correct": 7,
+   "evaluated": 7,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C03",
+    "C12",
+    "C13",
+    "C14",
+    "C16",
+    "C17",
+    "C19"
+   ]
+  },
+  "combined": {
+   "correct": 5,
+   "evaluated": 5,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "all": {
+   "correct": 20,
+   "evaluated": 20,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "wrong_cases": []
+ },
+ "openai/gpt-oss-20b": {
+  "period": {
+   "correct": 10,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C15",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "age": {
+   "correct": 7,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C02",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "product": {
+   "correct": 7,
+   "evaluated": 7,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C03",
+    "C12",
+    "C13",
+    "C14",
+    "C16",
+    "C17",
+    "C19"
+   ]
+  },
+  "combined": {
+   "correct": 5,
+   "evaluated": 5,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "all": {
+   "correct": 17,
+   "evaluated": 20,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "wrong_cases": [
+   "C02",
+   "C08",
+   "C11"
+  ]
+ },
+ "cohere/north-mini-code:free": {
+  "period": {
+   "correct": 9,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C15",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "age": {
+   "correct": 4,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C02",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "product": {
+   "correct": 6,
+   "evaluated": 7,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C03",
+    "C12",
+    "C13",
+    "C14",
+    "C16",
+    "C17",
+    "C19"
+   ]
+  },
+  "combined": {
+   "correct": 4,
+   "evaluated": 5,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "all": {
+   "correct": 14,
+   "evaluated": 20,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "wrong_cases": [
+   "C02",
+   "C08",
+   "C09",
+   "C10",
+   "C11",
+   "C17"
+  ]
+ },
+ "qwen/qwen3.8-27b": {
+  "period": {
+   "correct": 7,
+   "evaluated": 9,
+   "access_or_unfinished": 1,
+   "cases": [
+    "C01",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C15",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "age": {
+   "correct": 6,
+   "evaluated": 9,
+   "access_or_unfinished": 1,
+   "cases": [
+    "C02",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "product": {
+   "correct": 5,
+   "evaluated": 6,
+   "access_or_unfinished": 1,
+   "cases": [
+    "C03",
+    "C12",
+    "C13",
+    "C14",
+    "C16",
+    "C17",
+    "C19"
+   ]
+  },
+  "combined": {
+   "correct": 2,
+   "evaluated": 4,
+   "access_or_unfinished": 1,
+   "cases": [
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "all": {
+   "correct": 16,
+   "evaluated": 19,
+   "access_or_unfinished": 1,
+   "cases": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "wrong_cases": [
+   "C10",
+   "C15",
+   "C17",
+   "C19"
+  ]
+ },
+ "dots-studio/dots-3-note-preview:free": {
+  "period": {
+   "correct": 7,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C15",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "age": {
+   "correct": 3,
+   "evaluated": 10,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C02",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "product": {
+   "correct": 5,
+   "evaluated": 7,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C03",
+    "C12",
+    "C13",
+    "C14",
+    "C16",
+    "C17",
+    "C19"
+   ]
+  },
+  "combined": {
+   "correct": 1,
+   "evaluated": 5,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+   ]
+  },
+  "all": {
+   "correct": 13,
+   "evaluated": 20,
+   "access_or_unfinished": 0,
+   "cases": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20"
+   ]
+  },
+  "wrong_cases": [
+   "C02",
+   "C08",
+   "C10",
+   "C15",
+   "C16",
+   "C17",
+   "C18"
+  ]
+ }
+}
