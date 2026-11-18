@@ -28,9 +28,9 @@ This is the repository of one sub-group for the three lab sessions of the module
 | Five-model sheet | `td1/five-model-summary-en.csv` |
 | Prompts, verbatim | `td1/prompts-en.md` |
 | Access check, plans | `evidence/check-access-2026-10-21.txt`, `evidence/plans.md` |
-| Vote (TD 2) | `Orchestrateur.vote_k_sur_n` in `skeleton-multi-llm-en.py`; tests in `td2/voting-tests.csv`; decisions in `td2/vote-decisions.csv` (2-of-3) and `td2/vote-decisions-3of5.csv` |
-| Wrong consensus | `td2/wrong-consensus.md` (real case C10 and synthetic DEMO-VOTE) |
-| Routing rule and simulator | `td2/routing-rule.md`, `td2/routing-simulator-before.jsonl`, `td2/routing-simulator-after.jsonl` |
+| Vote (TD 2) | `Orchestrateur.vote_k_sur_n` in `skeleton-multi-llm-en.py`; tests in `td2/A-quorum/voting-tests.csv`; decisions in `td2/A-quorum/vote-decisions.csv` (2-of-3) and `td2/A-quorum/vote-decisions-3of5.csv` |
+| Wrong consensus | `td2/B-consensus/README.md` (real case C10 and synthetic DEMO-VOTE) |
+| Routing rule and simulator | `td2/C-routing/README.md`, `td2/C-routing/routing-simulator-before.jsonl`, `td2/C-routing/routing-simulator-after.jsonl` |
 | Costs and decision (TD 3) | `td3/cost-calculation.csv`, `td3/configuration-comparison.csv`, `td3/decision.md` |
 | Three slides | `slides/slides.html` (open in a browser, arrow keys) |
 | Demo for the video | `demo/demo-one-question.sh` |
@@ -49,12 +49,12 @@ python3 reference/independent_check.py       # recompute them in Python from the
 python3 td1/build_summaries.py               # merge traces, comparison CSV, pivot, family counts
 python3 skeleton-multi-llm-en.py --rates --state traces-td1.jsonl
 python3 atelier-vote.py                      # four synthetic examples
-python3 td2/vote_tests.py                    # vote contract tests, 12/12
-python3 td2/vote_all.py                      # 2-of-3 on the twenty questions
-python3 td2/wrong_consensus_check.py         # C10 and the boundary fixture
-python3 td2/demo_vote_toy.py                 # synthetic DEMO-VOTE
+python3 td2/A-quorum/vote_tests.py                    # vote contract tests, 12/12
+python3 td2/A-quorum/vote_all.py                      # 2-of-3 on the twenty questions
+python3 td2/B-consensus/wrong_consensus_check.py         # C10 and the boundary fixture
+python3 td2/B-consensus/demo_vote_toy.py                 # synthetic DEMO-VOTE
 python3 atelier-routage.py                   # simulator, supplied rule
-python3 td2/routage-adapte.py                # simulator, our rule
+python3 td2/C-routing/routage-adapte.py                # simulator, our rule
 python3 td3/configurations.py                # cost worksheet, configuration table, 3-of-5 decisions
 bash demo/demo-one-question.sh --replay      # demo without network (nature replay)
 ```

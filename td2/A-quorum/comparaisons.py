@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 from types import SimpleNamespace
 
-ROOT = Path(__file__).resolve().parent.parent   # racine du dépôt (le script est dans td2/)
+ROOT = Path(__file__).resolve().parents[2]   # racine du dépôt (le script est dans td2/A-quorum/)
 
 PANEL_3 = [
     ("groq", "openai/gpt-oss-120b"),

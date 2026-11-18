@@ -27,13 +27,13 @@ Both therefore miss every order placed between 1 January and the 26th birthday. 
 
 | Panel | Threshold | Decision on C10 | Source |
 |---|---|---|---|
-| Workshop panel: gpt-oss-120b, north-mini-code, qwen3.8-27b | 2-of-3 | abstention (558980, 0 and 119410 get one vote each) | `td2/atelier-vote-C10.json`, `td2/vote-decisions.csv` |
-| All five models | 3-of-5 | abstention (558980 and 119410 get two votes each) | `td2/vote-decisions-3of5.csv` |
+| Workshop panel: gpt-oss-120b, north-mini-code, qwen3.8-27b | 2-of-3 | abstention (558980, 0 and 119410 get one vote each) | `td2/A-quorum/atelier-vote-C10.json`, `td2/A-quorum/vote-decisions.csv` |
+| All five models | 3-of-5 | abstention (558980 and 119410 get two votes each) | `td2/A-quorum/vote-decisions-3of5.csv` |
 | Counterfactual panel: north-mini-code, qwen3.8-27b, dots-3-note | 2-of-3 | **consensus 119410, wrong** | same traces, panel recombined by hand: an illustration, not a configuration we ran |
 
 The agreement between two of the five models is not the result of the declared 2-of-3 panel, because Dots is not a member of it. With our panels the system abstains. A plausible panel built from free models would have published 119410 with two votes, and nothing in the vote would have flagged it. **The quorum exposes disagreement; it does not create truth.**
 
-**Independent check that detects it:** a boundary fixture. `td2/wrong_consensus_check.py` builds an in-memory base from `schema.sql` with two customers who are both 25 on the order date 2026-06-01. One was born 2001-03-01 (year difference 25, birthday passed). The other was born 2000-12-15 (year difference 26, birthday ahead). The expected value of 1100 cents is known by construction.
+**Independent check that detects it:** a boundary fixture. `td2/B-consensus/wrong_consensus_check.py` builds an in-memory base from `schema.sql` with two customers who are both 25 on the order date 2026-06-01. One was born 2001-03-01 (year difference 25, birthday passed). The other was born 2000-12-15 (year difference 26, birthday ahead). The expected value of 1100 cents is known by construction.
 
 | Query | Shop base | Fixture (expected 1100) |
 |---|---:|---:|
@@ -41,15 +41,15 @@ The agreement between two of the five models is not the result of the declared 2
 | qwen3.8-27b | 119410 | **100** |
 | dots-3-note | 119410 | **100** |
 
-Output: `td2/wrong-consensus-check-output.json`. Running each returned query on a fixture with a known answer catches the shared error, whatever the number of votes. A different panel or an escalation is a candidate check, not a guarantee: two other models could share the same mistake.
+Output: `td2/B-consensus/wrong-consensus-check-output.json`. Running each returned query on a fixture with a known answer catches the shared error, whatever the number of votes. A different panel or an escalation is a candidate check, not a guarantee: two other models could share the same mistake.
 
-**Consequence for the rule:** for any age filter, the customer and payout uses keep a quorum *and* abstain without a majority, and the payout use adds the fixtures and human review (`td2/routing-rule.md`). Qwen and Dots are never used alone on an age question.
+**Consequence for the rule:** for any age filter, the customer and payout uses keep a quorum *and* abstain without a majority, and the payout use adds the fixtures and human review (`td2/C-routing/README.md`). Qwen and Dots are never used alone on an age question.
 
 ## Case 2: DEMO-VOTE, synthetic (supplied by the assignment)
 
-The workshop example `wrong consensus` has proposals `[0, 0, 100]`, reference 100, threshold 2-of-3 (`td2/atelier-vote-synthetic.jsonl`). In the invented table there is one sale on `2026-01-01` for 100 cents. The requested period is `[2026-01-01, 2026-01-02)`. `td2/demo_vote_toy.py` runs both variants on a one-row in-memory table:
+The workshop example `wrong consensus` has proposals `[0, 0, 100]`, reference 100, threshold 2-of-3 (`td2/A-quorum/atelier-vote-synthetic.jsonl`). In the invented table there is one sale on `2026-01-01` for 100 cents. The requested period is `[2026-01-01, 2026-01-02)`. `td2/B-consensus/demo_vote_toy.py` runs both variants on a one-row in-memory table:
 
 - `sale_date > '2026-01-01' AND sale_date < '2026-01-02'` returns **0**. The strict lower bound excludes the sale made on the opening day.
 - `sale_date >= '2026-01-01' AND sale_date < '2026-01-02'` returns **100**, the convention "closed on the left".
 
-The 2-of-3 vote keeps 0 with two votes (`td2/demo-vote-toy-output.json`), and the independent reference is 100. The check that detects it is a boundary row exactly on the start timestamp, the same fixture idea as for C10. These values and queries are constructed teaching material. The panel names in this example are slots of the workshop: they are not model outputs.
+The 2-of-3 vote keeps 0 with two votes (`td2/B-consensus/demo-vote-toy-output.json`), and the independent reference is 100. The check that detects it is a boundary row exactly on the start timestamp, the same fixture idea as for C10. These values and queries are constructed teaching material. The panel names in this example are slots of the workshop: they are not model outputs.

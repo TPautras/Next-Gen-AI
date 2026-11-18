@@ -2,7 +2,7 @@
 
 **Partie A :** Arthur Belloc (seul)
 **Données :** traces réelles du TD 1 (`traces-td1.csv`, batch du 2026-10-21), références `reference-td1.csv`. Aucun nouvel appel réseau.
-**Code :** `skeleton-multi-llm-en.py` (`Orchestrateur.vote_k_sur_n`), `td2/comparaisons.py`.
+**Code :** `skeleton-multi-llm-en.py` (`Orchestrateur.vote_k_sur_n`), `td2/A-quorum/comparaisons.py`.
 
 ## 1. Objectif
 
@@ -26,7 +26,7 @@ Un seul modèle peut se tromper sans qu'on le voie. On fait voter plusieurs mod�
 
 ### 2.2 Tests du contrat : 12/12
 
-`python3 td2/vote_tests.py` → `td2/voting-tests.csv` (exemples **synthétiques**, nature `simulation`).
+`python3 td2/A-quorum/vote_tests.py` → `td2/A-quorum/voting-tests.csv` (exemples **synthétiques**, nature `simulation`).
 
 | Test | n | k | Valeurs proposées | Indisponibles | Résultat obtenu | Passe |
 |---|---|---|---|---|---|---|
@@ -66,7 +66,7 @@ Pas de bug : deux membres sur trois proposent 0, donc `k = 2` est atteint et le 
 - Pour chaque membre : sa **dernière tentative** sur la question ; un membre sans réponse exploitable reste dans `n` sans voter.
 - La référence n'est utilisée qu'**après** la décision, pour la colonne « Accord ».
 
-Reproduire : `python3 td2/comparaisons.py`
+Reproduire : `python3 td2/A-quorum/comparaisons.py`
 
 | Question | Référence | 2 sur 3 (panel fixe) | Accord | 3 sur 5 (5 modèles) | Accord | Change ? |
 |---|---|---|---|---|---|---|
@@ -174,13 +174,13 @@ Même mécanisme : 120b et qwen justes (605580), north, 20b et dots faux et disp
 ## 7. Reproduire
 
 ```
-python3 td2/vote_tests.py          # 12 tests du contrat -> td2/voting-tests.csv
+python3 td2/A-quorum/vote_tests.py          # 12 tests du contrat -> td2/A-quorum/voting-tests.csv
 python3 atelier-vote.py            # 4 exemples synthétiques
 python3 atelier-vote.py --traces traces-td1.csv --case C02   # une question réelle, panel fixe
-python3 td2/comparaisons.py        # tableau 2 sur 3 contre 3 sur 5
+python3 td2/A-quorum/comparaisons.py        # tableau 2 sur 3 contre 3 sur 5
 ```
 
 ## 8. Contribution
 
-- **Arthur Belloc** (seul sur la partie A) : réécriture de `vote_k_sur_n`, `td2/comparaisons.py` (tableau 2 sur 3 / 3 sur 5), ce rapport.
-- **Relecture** : indentation et propreté du code vérifiées (`vote_k_sur_n`, `td2/comparaisons.py`).
+- **Arthur Belloc** (seul sur la partie A) : réécriture de `vote_k_sur_n`, `td2/A-quorum/comparaisons.py` (tableau 2 sur 3 / 3 sur 5), ce rapport.
+- **Relecture** : indentation et propreté du code vérifiées (`vote_k_sur_n`, `td2/A-quorum/comparaisons.py`).

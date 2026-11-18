@@ -31,10 +31,10 @@ The assistant answers a merchant who asks, in the seller dashboard of a marketpl
 **Frequencies observed in this batch** (twenty questions, one draw at temperature 0):
 
 - gpt-oss-20b alone: 3 wrong out of 20, all on age questions (C02, C08, C11). The expected error cost is about 3/20 × 50 = 7.5 EUR per question, against 0.00013 USD of API equivalent.
-- gpt-oss-120b alone: 0 wrong out of 20. But a single model gives no signal when it is wrong. In this batch two other models agreed on a wrong age value (C10, `td2/wrong-consensus.md`).
+- gpt-oss-120b alone: 0 wrong out of 20. But a single model gives no signal when it is wrong. In this batch two other models agreed on a wrong age value (C10, `td2/B-consensus/README.md`).
 - Routing + 2-of-3 on age: 0 wrong, 2 abstentions out of 20 (C10, C17), so about 2/20 × 5 = 0.5 EUR per question of escalation.
 
-**Decision: routing rule + 2-of-3 quorum on every question with an age filter** (`td2/routing-rule.md`):
+**Decision: routing rule + 2-of-3 quorum on every question with an age filter** (`td2/C-routing/README.md`):
 
 - period and product questions go to gpt-oss-20b alone (all five models were correct on these ten cells);
 - age questions go to the 2-of-3 panel of distinct families;
@@ -52,6 +52,6 @@ For the other two uses: the **internal dashboard** takes the routing rule alone 
 - **Coverage.** Only three families and their combinations, all in one SQL dialect. Untested: returns, VAT, other tables, wording variations, longer prompts, other languages.
 - **The rule is fitted on the same twenty results** it is evaluated on. It needs a fresh sample.
 - **One account per provider.** One Groq account ran batches A, B and D, and one OpenRouter account ran C and E. The per-minute limits we hit (Qwen output tokens per minute 1000) are those of that organisation on that day.
-- **Simulator assumptions** (`td2/routage-adapte.py`): availability and reset times are scenario inputs; the question family is assumed known before routing; cash is the mean API equivalent of this batch.
+- **Simulator assumptions** (`td2/C-routing/routage-adapte.py`): availability and reset times are scenario inputs; the question family is assumed known before routing; cash is the mean API equivalent of this batch.
 - **Cost assumptions.** Plain text, no cache, no tools, no volume discount. The two error costs (50 EUR and 5 EUR) are assumptions. Human review is not costed in the configuration columns.
 - **Preview and free routes** (dots-3-note-preview, `:free` models) can change or disappear without notice.

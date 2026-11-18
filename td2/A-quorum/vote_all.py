@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """TD 2 step 1: run atelier-vote.py on the twenty questions and collect the
-decisions in td2/vote-decisions.csv. Panel fixed by the workshop (gpt-oss-120b,
+decisions in td2/A-quorum/vote-decisions.csv. Panel fixed by the workshop (gpt-oss-120b,
 north-mini-code, qwen3.8-27b), 2-of-3, last attempt per member. The vote never
 sees the reference; the comparison is made after the decision.
 
-    python3 td2/vote_all.py [--traces traces-td1.csv] [--nature real]
+    python3 td2/A-quorum/vote_all.py [--traces traces-td1.csv] [--nature real]
 """
 import argparse
 import csv
@@ -13,12 +13,12 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--traces", default="traces-td1.csv")
 parser.add_argument("--nature", default="real")
-parser.add_argument("--out", default="td2/vote-decisions.csv")
+parser.add_argument("--out", default="td2/A-quorum/vote-decisions.csv")
 args = parser.parse_args()
 
 rows = []

@@ -5,7 +5,7 @@ configuration on the twenty questions. No network: TD 1 traces only.
 Outputs:
 - td3/cost-calculation.csv          one row per attempt used by a configuration
 - td3/configuration-comparison.csv  one row per configuration
-- td2/vote-decisions-3of5.csv       the 3-of-5 vote on the five models
+- td2/A-quorum/vote-decisions-3of5.csv       the 3-of-5 vote on the five models
 
 Rules (kit-td1/methode-cout-en.md):
 - API equivalent = (input x input price + output x output price) / 1e6, USD excl. tax;
@@ -50,7 +50,7 @@ PROVIDER = {M120: "groq", M20: "groq", QWEN: "groq", COH: "openrouter", DOTS: "o
 PANEL3 = [M120, COH, QWEN]
 PANEL5 = [M120, M20, COH, QWEN, DOTS]
 
-# Routing rule of td2/routing-rule.md, internal-dashboard use: the first model per family.
+# Routing rule of td2/C-routing/README.md, internal-dashboard use: the first model per family.
 QUESTIONS = {q["id"]: q for q in json.loads((ROOT / "questions-td1.json").read_text())["questions"]}
 
 
@@ -201,7 +201,7 @@ def main() -> int:
             writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
             writer.writeheader()
             writer.writerows(rows)
-    with (ROOT / "td2" / "vote-decisions-3of5.csv").open("w", newline="", encoding="utf-8") as stream:
+    with (ROOT / "td2" / "A-quorum" / "vote-decisions-3of5.csv").open("w", newline="", encoding="utf-8") as stream:
         writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(["case_id", "nature", "panel_k_of_n", "decision", "value_cents", "votes", "agreeing_models",
                          "reference_cents", "matches_reference"])

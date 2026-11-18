@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """TD 2 step 3: the routing simulator of atelier-routage.py adapted to our rule
-(td2/routing-rule.md). No API call, no key.
+(td2/C-routing/README.md). No API call, no key.
 
 Resources are the five TD 1 models plus one paid route. Eligibility is per
 question family and comes from the TD 1 table (cells cited in
-td2/routing-rule.md); cash is the API-equivalent cost per question measured in
+td2/C-routing/README.md); cash is the API-equivalent cost per question measured in
 td3/configuration-comparison.csv (USD excl. tax, Groq prices of 2026-10-05).
 Availability and reset times are scenario inputs, not measurements.
 
-    python3 td2/routage-adapte.py
-    python3 td2/routage-adapte.py --scenario R3-deferrable
+    python3 td2/C-routing/routage-adapte.py
+    python3 td2/C-routing/routage-adapte.py --scenario R3-deferrable
 """
 import argparse
 import json
@@ -38,7 +38,7 @@ QUORUM_PANEL = ["groq:openai/gpt-oss-120b", "openrouter:cohere/north-mini-code:f
 CHECKS = {
     "dashboard": "read-only sandbox execution, one-row revenue_cents shape check",
     "customer": "2-of-3 quorum (gpt-oss-120b, north-mini-code, qwen3.8-27b); abstain and escalate when no majority",
-    "payout": "3-of-5 quorum plus boundary fixtures (td2/wrong_consensus_check.py) and human review before payment",
+    "payout": "3-of-5 quorum plus boundary fixtures (td2/B-consensus/wrong_consensus_check.py) and human review before payment",
 }
 
 
