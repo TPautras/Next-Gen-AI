@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Cost method, step by step | ESILV</title><style>
+:root{--ink:#18283d;--blue:#165c79;--line:#cbd7df;--bg:#eef3f6;--paper:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:62px}body{margin:0;color:var(--ink);background:var(--bg);font:17px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#075e83;overflow-wrap:anywhere}header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:2px solid var(--blue)}
+.bar{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 16px;flex-wrap:wrap}.brand{font-size:.86rem;font-weight:700}
+button{font:inherit;min-height:40px;padding:6px 12px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;color:var(--ink)}
+#header-content{padding:0 16px 12px}nav{display:flex;flex-wrap:wrap;gap:6px}nav a{padding:4px 10px;border:1px solid var(--line);border-radius:5px;text-decoration:none;font-size:.85rem;max-width:100%}
+header.collapsed #header-content,header.collapsed .brand{display:none}header.collapsed .bar{justify-content:flex-end}
+main{max-width:1040px;margin:24px auto 50px;background:var(--paper);padding:32px 44px;border-radius:10px}
+h1{font-size:2rem;line-height:1.15;color:var(--blue)}h2{font-size:1.38rem;color:var(--blue);margin:34px 0 12px;border-top:1px solid var(--line);padding-top:16px}h3{font-size:1.12rem}
+section.slide{border-bottom:1px solid var(--line);padding:22px 0;display:block;min-height:0}.slide h1{font-size:1.8rem}.chapitre-tag,.meta,.sub{color:#45566b}.card{border:1px solid var(--line);padding:12px;margin:8px 0;border-radius:6px}.cards,.grid-2,.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px}
+.notice{border-left:5px solid #ba7419;background:#fff4dc;padding:12px 16px;margin:0 0 24px;font-size:.96rem}.notice p{margin:4px 0}.notice.final{border-left-color:#2d7a4f;background:#eef7f1}.notice.pack{border-left-color:#165c79;background:#f4fafc}p,li{max-width:86ch}
+.tableau{overflow-x:auto;max-width:100%;margin:16px 0}table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#e7eff3}pre{overflow-x:auto;padding:16px;background:#edf2f7;border-radius:6px;font-size:.86rem}code{font-family:ui-monospace,monospace;font-size:.91em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}summary{min-height:40px;cursor:pointer;padding:8px 0;font-weight:600}
+blockquote{margin:12px 0;padding:8px 16px;border-left:3px solid var(--line)}.toc{padding:16px;background:#f2f6f8}.toc ul{columns:2;column-gap:32px}.toc li{break-inside:avoid;margin:3px 0}.check{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid #e4eaf0;padding:10px 0}.check input{width:22px;height:22px;flex:none;margin:4px 0}.check label{cursor:pointer}.unit{break-inside:avoid}.evidence{font-size:.9rem;color:#46586d}.pill{display:inline-block;background:#e6f1f4;padding:3px 8px;border-radius:4px;font-size:.83rem}.steps{list-style:none;padding:0;margin:18px 0;counter-reset:pas}.steps>li{counter-increment:pas;display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:10px 0;background:#fbfdfe;break-inside:avoid}.steps>li::before{content:counter(pas);flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:1.05rem;display:flex;align-items:center;justify-content:center}.steps .body{flex:1 1 auto;min-width:0}.steps .what{font-weight:700;font-size:1.02rem}.steps .what svg{vertical-align:-4px;margin-right:8px}.steps .how{margin:5px 0 0}.steps .ok{margin:7px 0 0;font-size:.93rem;border-left:4px solid #2d7a4f;background:#eef7f1;padding:6px 10px;border-radius:0 5px 5px 0}.steps .ko{margin:5px 0 0;font-size:.93rem;border-left:4px solid #ba7419;background:#fff4dc;padding:6px 10px;border-radius:0 5px 5px 0}.steps .time{display:inline-block;background:#e6f1f4;padding:2px 8px;border-radius:4px;font-size:.82rem;font-weight:600}.gate{border:2px solid var(--blue);border-radius:8px;padding:14px 18px;margin:22px 0;background:#f4fafc}.gate p{margin:5px 0}.gate .flag{font-weight:700;color:var(--blue)}@media(max-width:700px){.steps>li{gap:11px;padding:12px}.steps>li::before{flex-basis:32px;width:32px;height:32px;font-size:.95rem}}@media print{.steps>li{background:#fff}.gate{background:#fff}}footer{max-width:1040px;margin:auto;padding:0 24px 28px;font-size:.85rem;color:#495d70}
+@media(max-width:700px){body{font-size:16px}main{margin:10px 6px;padding:20px 15px}h1{font-size:1.6rem}.toc ul{columns:1}.bar{padding:3px 10px}#header-content{padding:0 10px 10px}}
+@media print{header,.toc,.self-check-help,footer{display:none}body{background:white;font-size:10pt;line-height:1.35}main{padding:0;margin:0;border-radius:0;max-width:none}h1{font-size:20pt}h2{font-size:14pt;break-after:avoid;margin-top:18pt}h3{font-size:12pt;break-after:avoid}thead{display:table-header-group;break-after:avoid}p,li,tr,.check{break-inside:avoid}.tableau{overflow:visible}table{font-size:8.3pt}th,td{padding:5pt}pre{white-space:pre-wrap;overflow:visible}a{color:inherit;text-decoration:none}.notice{border:1pt solid #aaa;background:#fff}.unit{break-inside:auto}.check input{display:none}footer{font-size:8pt;padding:12pt 0}section.slide{break-before:page}.slide:first-of-type{break-before:auto}@page{size:A4;margin:17mm;@bottom-right{content:counter(page);font-size:8pt;color:#526477}}}
+
+.llm-note{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media print{.llm-note{display:none!important}}
+
+a.download{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;background:#165c79;color:#fff;border-radius:5px;font-weight:700;text-decoration:none}
+</style><link rel="alternate" type="text/plain" title="Site map for AI assistants" href="../../llms.txt"><link rel="alternate" type="text/markdown" title="Full student content in one file" href="../../llms-full.md"></head>
+<body><header><div class="bar"><span class="brand">ESILV · Trustworthy Generative AI · 2026-11-18-students-5</span><button id="header-toggle" aria-expanded="true" aria-controls="header-content">Collapse header</button></div><div id="header-content"><nav aria-label="Resource navigation"><a href="../../index.html">Home</a><a href="../before-td1-en.html">Before TD 1</a><a href="../start-here-en.html">Resources</a><a href="../assessment-en.html">Assessment</a><a href="../submission-en.html">Hand-in</a><a href="../reference-values-td1-en.html">TD 1 reference values</a><a href="../resource-index-en.html">Files</a></nav></div></header>
+<main><p class="llm-note" aria-hidden="true">Machine-readable versions of this site: site map with full URLs and direct section links, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms.txt; full student content in one file, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms-full.md.</p><h1 id="section-1">Cost method, step by step</h1><aside class="notice"><p><strong>Beta · 2026-11-18-students-5, 18 November 2026</strong></p><p>Beta: this resource may still change before its session. The site is updated in place; the pack version above identifies what you read.</p></aside><details class="toc"><summary>Contents (8 sections)</summary><ul><li><a href="#section-2">The three quantities, never added together</a></li><li><a href="#section-3">Step 1 - Read the tokens in the trace</a></li><li><a href="#section-4">Step 2 - Choose the reference price</a></li><li><a href="#section-5">Step 3 - Compute one call</a></li><li><a href="#section-6">Step 4 - Compute one configuration</a></li><li><a href="#section-7">Step 5 - Move to the scale of a company</a></li><li><a href="#section-8">What this method does not give</a></li><li><a href="#section-9">Appendix - Computation errors to correct during the session</a></li></ul></details>
+<blockquote><p>Beta. Pack 2026-11-18-students-5. Set your machine up with <a href="../before-td1-en.html">Before TD 1</a>.</p></blockquote>
+<p>The required lab calls use free routes. Record zero real spend only after checking the plan and route actually used, with dated evidence. The cost is computed all the same, because the decision made in TD 3 is about what the same configuration would cost a company. This document gives the procedure, from reading the tokens to the annual bill.</p>
+<p>Reading note: all amounts exclude tax. Prices per million tokens are in dollars, subscription costs in euros.</p>
+<h2 id="section-2">The three quantities, never added together</h2>
+<div class="tableau"><table>
+<thead>
+<tr><th>Quantity</th><th>What it measures</th><th>Where it comes from</th></tr>
+</thead>
+<tbody>
+<tr><td>Real spend</td><td>What the sub-group pays during the lab session</td><td>Native cost if provided; otherwise documented plan/route evidence, separate from the raw trace field</td></tr>
+<tr><td>API-equivalent cost</td><td>What the same consumption would cost on a route billed per token</td><td>The tokens of the trace multiplied by a dated price</td></tr>
+<tr><td>Cost charged to a subscription</td><td>The share of the fee consumed by that call</td><td>The price of the fee divided by the consumption of the period</td></tr>
+</tbody>
+</table></div>
+<p>These three columns stay separate in every table you produce. A total covers one of them only.</p>
+<h2 id="section-3">Step 1 - Read the tokens in the trace</h2>
+<p>Open <code>traces-td1.csv</code> and read, for the chosen call: <code>model_requested</code>, <code>tokens_prompt</code>, <code>tokens_completion</code>, <code>tokens_reasoning</code>, <code>cost_native</code>, <code>latency_ms</code>, <code>date_utc</code>.</p>
+<p>Count output tokens once. When the provider includes reasoning in <code>tokens_completion</code>, <code>tokens_reasoning</code> is information only: do not add it. When the provider counts it separately, add it to the output tokens. The provider documentation settles this point.</p>
+<p>An empty counter stays empty. Write N/A, never zero: zero is a measurement, a missing measurement is not.</p>
+<h2 id="section-4">Step 2 - Choose the reference price</h2>
+<p>Choose a documented billed route of <strong>the exact same model</strong>, then record input/output prices, currency, date and source. The following Groq prices were checked on the <a href="https://console.groq.com/docs/models">official model catalogue</a> on <strong>5 October 2026</strong>, in USD excluding tax per million tokens:</p>
+<div class="tableau"><table>
+<thead>
+<tr><th>Model in the kit</th><th>Reference billed route</th><th>Input</th><th>Output</th></tr>
+</thead>
+<tbody>
+<tr><td><code>openai/gpt-oss-120b</code></td><td>Groq Developer</td><td>0.15</td><td>0.60</td></tr>
+<tr><td><code>openai/gpt-oss-20b</code></td><td>Groq Developer</td><td>0.075</td><td>0.30</td></tr>
+<tr><td><code>qwen/qwen3.8-27b</code></td><td>Groq Developer</td><td>0.80</td><td>4.00</td></tr>
+<tr><td><code>cohere/north-mini-code:free</code></td><td>exact matching paid route not documented in this kit</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><code>dots-studio/dots-3-note-preview:free</code></td><td>exact matching paid route not documented in this kit</td><td>N/A</td><td>N/A</td></tr>
+</tbody>
+</table></div>
+<p>The dated portfolio remains a reference snapshot. The operational selection above is dated 14 October 2026. For Cohere North Mini Code and Dots3-Note Preview, the <a href="https://openrouter.ai/api/v1/models">OpenRouter catalogue</a>, checked on that date, documents a free route without a matching paid route. Keep the billed equivalent N/A until a source documents the exact same model and dated prices. A shared family name does not establish model identity.</p>
+<h2 id="section-5">Step 3 - Compute one call</h2>
+<pre><code>API-equivalent cost in USD excl. tax = (input_tokens x input_price + output_tokens x output_price) / 1,000,000</code></pre>
+<p><strong>Fictional Groq example</strong>, unrelated to a lab question: <code>openai/gpt-oss-120b</code>, 2,000 input tokens and 300 output tokens, <code>cost_native</code> absent in the response. The account's Free plan has been checked and recorded for this example; the <a href="https://console.groq.com/docs/billing-faqs">billing documentation</a>, checked on 5 October 2026, distinguishes Free from usage-billed Developer.</p>
+<div class="tableau"><table>
+<thead>
+<tr><th>Quantity</th><th>Value and evidence</th></tr>
+</thead>
+<tbody>
+<tr><td>Native cost in the raw trace</td><td>Empty: the provider supplied no measurement</td></tr>
+<tr><td>Real spend</td><td>0 USD excl. tax, established from the verified Free plan, not from the missing native field</td></tr>
+<tr><td>API equivalent</td><td>(2,000 x 0.15 + 300 x 0.60) / 1,000,000 = <strong>0.00048 USD excl. tax</strong>, using Groq Developer prices of 5 October 2026</td></tr>
+</tbody>
+</table></div>
+<p>For your own call, keep the actual tokens and dated plan evidence. If the plan cannot be verified, real spend is N/A. A derived zero belongs in the cost table with its source; the missing raw field remains empty.</p>
+<p>This computation assumes plain text, with no context cache and no separately billed tool. If your trace carries one of these categories, write it as an assumption under the table.</p>
+<h2 id="section-6">Step 4 - Compute one configuration</h2>
+<p>Add up <strong>every call made</strong>, retries included. A quorum counts each model consulted. An escalation counts the calls already issued before it. The last attempt settles the verdict; all of them consumed capacity and contribute to the equivalent when it can be computed.</p>
+<div class="tableau"><table>
+<thead>
+<tr><th>Configuration</th><th>Cases handled</th><th>Answers / abstentions / errors</th><th>Calls and retries</th><th>Input / output tokens</th><th>API-equivalent cost</th><th>Real spend</th></tr>
+</thead>
+<tbody>
+<tr><td>Single model</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2-of-3 quorum</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3-of-5 quorum</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Your routing rule</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table></div>
+<p>For a complete equivalent, first verify that every included attempt has the required tokens and exact-model prices. If a configuration is only partly quantifiable, mark its total N/A, state coverage (known calls/total calls), name the missing models or counters, and label any known subtotal explicitly. Do not project that subtotal as the full configuration cost.</p>
+<p>Then divide a complete equivalent by the number of requests handled to obtain a cost per request. State the abstentions and the errors next to it: a cheaper configuration that abstains often does not deliver the same service.</p>
+<p>A replayed row keeps the counters of the original run. It is not a new consumption and does not enter the total for the day.</p>
+<h2 id="section-7">Step 5 - Move to the scale of a company</h2>
+<p>State the annual volume, then multiply by the cost per request:</p>
+<pre><code>20 people x 10 requests per day x 20 working days x 12 months = 48,000 requests per year</code></pre>
+<div class="tableau"><table>
+<thead>
+<tr><th>Average cost per request</th><th>Annual bill</th></tr>
+</thead>
+<tbody>
+<tr><td>0.03 USD excl. tax</td><td>1,440 USD excl. tax</td></tr>
+<tr><td>3 USD excl. tax</td><td>144,000 USD excl. tax</td></tr>
+<tr><td>30 USD excl. tax</td><td>1,440,000 USD excl. tax</td></tr>
+</tbody>
+</table></div>
+<p>The gap between these three rows does not come from the volume, which is identical, but from the model and the configuration chosen for each request. That is the subject of the routing rule of TD 2.</p>
+<p>A complex request handled by a latest-generation model chains several calls: one hundred calls of 20,000 input tokens and 2,000 output tokens, at prices of 10 and 50 dollars excluding tax per million, cost 30 dollars excluding tax. That amount is a computation under written assumptions, not a measured average cost.</p>
+<h2 id="section-8">What this method does not give</h2>
+<p>It does not give a provider invoice: real billing adds the context cache, the tools, volume discounts and long-context surcharges. It does not give an error rate per model: that requires repeated questions and an independent sample, outside these three sessions. Twenty questions also establish no permanent model ranking or error bound guaranteed by a quorum. It does not give the cost of the human work around the system either, which TD 3 mentions without quantifying.</p>
+<h2 id="section-9">Appendix - Computation errors to correct during the session</h2>
+<ul>
+<li>A cost shown as zero when the price was never entered: the column stays empty, it does not equal zero.</li>
+<li>Reasoning tokens added to output tokens that already contained them: the total doubles for no reason.</li>
+<li>An API-equivalent cost presented as a spend: the two columns do not mix.</li>
+<li>A price with no date: the catalogue has changed since, and the computation can no longer be checked.</li>
+</ul></main><footer>Didier Parisot · ESILV · Pack 2026-11-18-students-5.</footer><script>
+(()=>{'use strict';const header=document.querySelector('header'),button=document.getElementById('header-toggle');
+const key='esilv-beta-header:'+location.pathname;let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+function setHeader(collapsed){header.classList.toggle('collapsed',collapsed);button.setAttribute('aria-expanded',String(!collapsed));button.textContent=collapsed?'Expand header':'Collapse header';document.documentElement.style.scrollPaddingTop=(header.offsetHeight+12)+'px';}
+setHeader(saved===null?matchMedia('(max-width:700px)').matches:saved==='collapsed');button.addEventListener('click',()=>{const c=!header.classList.contains('collapsed');setHeader(c);try{localStorage.setItem(key,c?'collapsed':'expanded')}catch(e){}});
+addEventListener('resize',()=>setHeader(header.classList.contains('collapsed')));
+document.querySelectorAll('input[data-check]').forEach(box=>{const k='esilv-beta-review-1:'+location.pathname+':'+box.dataset.check;try{box.checked=localStorage.getItem(k)==='1'}catch(e){}box.addEventListener('change',()=>{try{localStorage.setItem(k,box.checked?'1':'0')}catch(e){}})});
+})();
+</script></body></html>

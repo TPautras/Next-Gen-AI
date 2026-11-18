@@ -1,0 +1,220 @@
+{
+  "version": "2026-11-18-students-5",
+  "files": {
+    ".gitignore": {
+      "size": 439,
+      "sha256": "d1a6739c189033a3fd4b90f09783d1c1db2d23d529797e4fbb307c23a826c518",
+      "preparation": "Kit file: .gitignore; byte-identical"
+    },
+    "README.html": {
+      "size": 15905,
+      "sha256": "ae0c163b9c94a1ad3e308ecc0c13f1ca062f2356aa026ac13a088165ded0f240",
+      "preparation": "Kit file: README.md; Final; rendered as standalone HTML"
+    },
+    "README.md": {
+      "size": 4981,
+      "sha256": "f2456e8e9057c552f1e9cf12b1359584f5d94a66b2ea477becdc0afcf9c4c5a8",
+      "preparation": "Kit file: README.md; Final"
+    },
+    "atelier-routage.py": {
+      "size": 4159,
+      "sha256": "2971555aff39dede9e1a315ebb00d92d7b5c5f2eaf158199730fcc2c1839e28d",
+      "preparation": "Kit file: atelier-routage.py; byte-identical"
+    },
+    "atelier-vote.py": {
+      "size": 4789,
+      "sha256": "964ab78c8507cf8721b03c623f52f145fa519876925ec18cf468f2d75a623dca",
+      "preparation": "Kit file: atelier-vote.py; byte-identical"
+    },
+    "check_access.py": {
+      "size": 11577,
+      "sha256": "011b987a0a71c020307587f6f21d4a2c4c78a4b33ae7c9b228fe0e51317cc35e",
+      "preparation": "Kit file: check_access.py; byte-identical"
+    },
+    "comparison-example-en.html": {
+      "size": 11868,
+      "sha256": "210c1758e292438fb2c2318ae4f8fe8f7dff4b426ff02dd549e81deed875089a",
+      "preparation": "Kit file: comparison-example-en.md; Beta; rendered as standalone HTML"
+    },
+    "comparison-example-en.md": {
+      "size": 2613,
+      "sha256": "14be2ab3794ce13d91ef5a49a01a28d73f48ee1fa5bb2d5f69da220091e6203d",
+      "preparation": "Kit file: comparison-example-en.md; Beta"
+    },
+    "consigne-etudiante-en.html": {
+      "size": 32377,
+      "sha256": "5bc260dc58065896f0c137003c9dc255f2796a8ba7fff77766790f839922ec6d",
+      "preparation": "Kit file: consigne-etudiante-en.md; Final; rendered as standalone HTML"
+    },
+    "consigne-etudiante-en.md": {
+      "size": 20212,
+      "sha256": "f77feb79e0638ffc997cd07b6faf1f22ba92de664583857ff1ddd685c94ea23e",
+      "preparation": "Kit file: consigne-etudiante-en.md; Final"
+    },
+    "data/boutique.sqlite": {
+      "size": 53248,
+      "sha256": "0077e235adc2ca647b484e3083c98a6d7cae3ef3655ce366a299caf13398fec2",
+      "preparation": "Kit file: data/boutique.sqlite; byte-identical"
+    },
+    "data/customers.csv": {
+      "size": 2159,
+      "sha256": "f3053b6a89036a9cc426649798283b70dc882fc2d18034cde52e85614252100a",
+      "preparation": "Kit file: data/customers.csv; byte-identical"
+    },
+    "data/manifest.json": {
+      "size": 2503,
+      "sha256": "4a0198d976aa30e64cc329f6a414aff08f7cd58a6acccad196e13ccbfcd9fa26",
+      "preparation": "Kit file: data/manifest.json; byte-identical"
+    },
+    "data/orders.csv": {
+      "size": 13954,
+      "sha256": "5c92d3c6d2797b1ee007144c8d4bf2e43b8883037d893339d680205204988452",
+      "preparation": "Kit file: data/orders.csv; byte-identical"
+    },
+    "data/product.csv": {
+      "size": 52,
+      "sha256": "f4b41301a5bc3e03362215448d67d2439fc38352436c6b4cda57b9f2b5797e64",
+      "preparation": "Kit file: data/product.csv; byte-identical"
+    },
+    "enonce-td1-en.html": {
+      "size": 24968,
+      "sha256": "d6b63cf6782dc3535a5e9c0ff30e54257cf6c3a91d6ac93c51baddb81412e42d",
+      "preparation": "Kit file: enonce-td1-en.md; Final; rendered as standalone HTML"
+    },
+    "enonce-td1-en.md": {
+      "size": 13750,
+      "sha256": "f25a9e6c1949c54b96050f7abb984642ea2f7f3ea4d8834cfae508e6ca04c10a",
+      "preparation": "Kit file: enonce-td1-en.md; Final"
+    },
+    "enonce-td1-en.pdf": {
+      "size": 35662,
+      "sha256": "770c909219ee220f39ec80a474825f23c52172ebc1c4d2e130afb82b339ae4f9",
+      "preparation": "Printable PDF of kit-td1/enonce-td1-en"
+    },
+    "enonce-td2-en.html": {
+      "size": 30322,
+      "sha256": "d45359033baf4eddc484114ce17028519d862c86fb2bf27a9ef557ca6b0937dc",
+      "preparation": "Kit file: enonce-td2-en.md; Final; rendered as standalone HTML"
+    },
+    "enonce-td2-en.md": {
+      "size": 18100,
+      "sha256": "1123a98a4da18b8a3ca171cda01ea2cd2edc41a82adf00044c5cacbc7dc85ada",
+      "preparation": "Kit file: enonce-td2-en.md; Final"
+    },
+    "enonce-td2-en.pdf": {
+      "size": 51892,
+      "sha256": "e3ba057026277407d6075036309655cb66bdb8f387e22187628493a31c003039",
+      "preparation": "Printable PDF of kit-td1/enonce-td2-en"
+    },
+    "enonce-td3-en.html": {
+      "size": 17698,
+      "sha256": "534a66c0647bcecf51ccb7d7c50a23c78072172f2c48d02a9a1f05e89b303cbf",
+      "preparation": "Kit file: enonce-td3-en.md; Beta; rendered as standalone HTML"
+    },
+    "enonce-td3-en.md": {
+      "size": 7277,
+      "sha256": "fe53601e1d5d2c5825981a1ec3c7e03c1ed68add474a829a44c7326d4a37c451",
+      "preparation": "Kit file: enonce-td3-en.md; Beta"
+    },
+    "enonce-td3-en.pdf": {
+      "size": 26165,
+      "sha256": "bee2059b95cf82f83836187176adcccc307361765b1645238a1ced6e58d1d5a7",
+      "preparation": "Printable PDF of kit-td1/enonce-td3-en"
+    },
+    "five-model-summary-en.csv": {
+      "size": 470,
+      "sha256": "4c19556c779f671825754115db56d8ba7d640710ddaab7381dd39fab4e39ea46",
+      "preparation": "Kit file: five-model-summary-en.csv; byte-identical"
+    },
+    "guide-environnement-etudiant-en.html": {
+      "size": 17747,
+      "sha256": "b3b18e5902c79dee68e4f232daff1f1add069352e5316cfa17c00e8b0348110c",
+      "preparation": "Kit file: guide-environnement-etudiant-en.md; Final; rendered as standalone HTML"
+    },
+    "guide-environnement-etudiant-en.md": {
+      "size": 7559,
+      "sha256": "0cc6293a53135d8629baaf7a1411ab0dc8fd92a5e8aad1dcb8599332e7cbdc73",
+      "preparation": "Kit file: guide-environnement-etudiant-en.md; Final"
+    },
+    "methode-cout-en.html": {
+      "size": 18669,
+      "sha256": "662634b0d1038e40519c7263f29b5f28d83871658997d62d4ac0353734cf602a",
+      "preparation": "Kit file: methode-cout-en.md; Beta; rendered as standalone HTML"
+    },
+    "methode-cout-en.md": {
+      "size": 7586,
+      "sha256": "a43d8613d07a675b0f5e97fd22b5a9da231ef5a7aa00ea5328a1cd3cd6499fab",
+      "preparation": "Kit file: methode-cout-en.md; Beta"
+    },
+    "methode-cout-en.pdf": {
+      "size": 30796,
+      "sha256": "317f6eb9956a4c01cbe6451d1f791afac326d078c2e79eb8949e7168b78d016a",
+      "preparation": "Printable PDF of kit-td1/methode-cout-en"
+    },
+    "model-question-comparison-en.csv": {
+      "size": 90,
+      "sha256": "afac47b0bee1bc4824c93d99f1344511834822f82ab8353f8a878b5dbf02269e",
+      "preparation": "Kit file: model-question-comparison-en.csv; byte-identical"
+    },
+    "modeles-autorises.json": {
+      "size": 5199,
+      "sha256": "492e316a619b662c42b8b9e9202d3bc126a85ed357bdf96ebec7f58baf5d5c77",
+      "preparation": "Kit file: modeles-autorises.json; byte-identical"
+    },
+    "portefeuille-modeles-2026-09-28.csv": {
+      "size": 6565,
+      "sha256": "33b277027777c0b0cad5a8c91a229a8c8ed09eb41b437be426e78bba124c02f1",
+      "preparation": "Kit file: portefeuille-modeles-2026-09-28.csv; byte-identical"
+    },
+    "portefeuille-modeles-en.html": {
+      "size": 28131,
+      "sha256": "6baf74f66a17d0c8a48298356074f6f9d279ade1df2d78fa05cdcc37ea2563f3",
+      "preparation": "Kit file: portefeuille-modeles-en.md; Beta; rendered as standalone HTML"
+    },
+    "portefeuille-modeles-en.md": {
+      "size": 12989,
+      "sha256": "022064e6b93c9ef60ac9dda2b635378ff41ebc80b194e60580c9af507d1b146b",
+      "preparation": "Kit file: portefeuille-modeles-en.md; Beta"
+    },
+    "questions-td1-en.html": {
+      "size": 14570,
+      "sha256": "870be4aac184c6df602805a8c604b7ab88210f4fabcce78c2742aab39cf62b9c",
+      "preparation": "Kit file: questions-td1-en.md; Final; rendered as standalone HTML"
+    },
+    "questions-td1-en.md": {
+      "size": 5095,
+      "sha256": "9bc42554f684902d929dbd9e372f1ad92112b37f6b40dcf4c2c6c27a9ea7d00a",
+      "preparation": "Kit file: questions-td1-en.md; Final"
+    },
+    "questions-td1.json": {
+      "size": 4625,
+      "sha256": "0afbc6c36eed725ebaa9c5c29bf3c6558746a04d232a2678a492864d22e9da1e",
+      "preparation": "Kit file: questions-td1.json; byte-identical"
+    },
+    "reference-td1.csv": {
+      "size": 146,
+      "sha256": "696ad98ccd48986d9165a665da1de267d131f9946966d4d6739a9e2420e74682",
+      "preparation": "Kit file: reference-td1.csv; byte-identical"
+    },
+    "sandbox_sqlite.py": {
+      "size": 9963,
+      "sha256": "4072b04ae67420cdb2c1993fe9463ce113f5b2a9e6816e8c2f6677181e433cc0",
+      "preparation": "Kit file: sandbox_sqlite.py; byte-identical"
+    },
+    "schema.sql": {
+      "size": 804,
+      "sha256": "fe25401e81549a61cbf074e2ceea9845430afebaa072e5ac6680136f3a0c0104",
+      "preparation": "Kit file: schema.sql; byte-identical"
+    },
+    "skeleton-multi-llm-en.py": {
+      "size": 41279,
+      "sha256": "55abb7d86d40e18534b9d6b1f91e467a0eebcec55d98bdcbe9de1769e070e17d",
+      "preparation": "Kit file: skeleton-multi-llm-en.py; byte-identical"
+    },
+    "verify-data.py": {
+      "size": 1801,
+      "sha256": "4178570921f8ccf51cfb1ebb602025d3a36400da927a88821c2e16b8d040250e",
+      "preparation": "Offline data-integrity helper; no model calls or reference answers"
+    }
+  }
+}
