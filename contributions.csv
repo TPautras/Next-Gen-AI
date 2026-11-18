@@ -5,7 +5,7 @@ Thomas Pautras (Groq and OpenRouter accounts),C,batch C north-mini-code (20 cell
 Thomas Pautras (Groq and OpenRouter accounts),D,batch D qwen3.8-27b (20 cells + 4 retries),traces/traces-D.csv; traces/state-D.jsonl,,2026-10-21
 Thomas Pautras (Groq and OpenRouter accounts),E,batch E dots-3-note (20 cells),traces/traces-E.csv; traces/state-E.jsonl,,2026-10-21
 "Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc",F,twenty reference queries,reference/build_reference.py; reference-td1.csv,reference/independent_check.py (20/20 agree),2026-10-21
-"Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc",G,trace merge; comparison and five-model summaries; failure explanations,td1/build_summaries.py; td1/explanations.json; model-question-comparison-en.csv; five-model-summary-en.csv,,2026-10-21
+"Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc",G,trace merge; comparison and five-model summaries; failure explanations,td1/build_summaries.py; td1/explanations.json; td1/model-question-comparison-en.csv; td1/five-model-summary-en.csv,,2026-10-21
 "Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc",,TD 2 vote and contract tests,skeleton-multi-llm-en.py Orchestrateur.vote_k_sur_n; td2/vote_tests.py,td2/voting-tests.csv (12/12 pass),2026-10-21
 "Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc",,TD 2 wrong consensus C10,td2/wrong-consensus.md; td2/wrong_consensus_check.py,td2/wrong-consensus-check-output.json,2026-10-21
 "Thomas Pautras, Azel Ouabdesselam, Vladimir Varenne-Welnovski, Arthur Belloc",,TD 2 routing rule and simulator,td2/routing-rule.md; td2/routage-adapte.py,,2026-10-21

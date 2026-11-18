@@ -24,9 +24,9 @@ This is the repository of one sub-group for the three lab sessions of the module
 |---|---|
 | References (TD 1) | `reference-td1.csv`, built by `reference/build_reference.py`, checked by `reference/independent_check.py` |
 | Raw traces, all attempts | `traces-td1.csv` and `traces-td1.jsonl` (merged); per operator `traces/traces-{A..E}.csv` and `traces/state-{A..E}.jsonl`; console log `traces/batch-log-2026-10-21.txt` |
-| Comparison and pivot | `model-question-comparison-en.csv`, `td1/pivot-models-x-questions.md` |
-| Five-model sheet | `five-model-summary-en.csv` |
-| Prompts, verbatim | `prompts-en.md` |
+| Comparison and pivot | `td1/model-question-comparison-en.csv`, `td1/pivot-models-x-questions.md` |
+| Five-model sheet | `td1/five-model-summary-en.csv` |
+| Prompts, verbatim | `td1/prompts-en.md` |
 | Access check, plans | `evidence/check-access-2026-10-21.txt`, `evidence/plans.md` |
 | Vote (TD 2) | `Orchestrateur.vote_k_sur_n` in `skeleton-multi-llm-en.py`; tests in `td2/voting-tests.csv`; decisions in `td2/vote-decisions.csv` (2-of-3) and `td2/vote-decisions-3of5.csv` |
 | Wrong consensus | `td2/wrong-consensus.md` (real case C10 and synthetic DEMO-VOTE) |
@@ -81,7 +81,7 @@ python3 skeleton-multi-llm-en.py --run --models openrouter:dots-studio/dots-3-no
 
 ## Kit files kept unchanged
 
-`atelier-routage.py`, `atelier-vote.py`, `check_access.py`, `sandbox_sqlite.py`, `verify-data.py`, `schema.sql`, `questions-td1.json`, `modeles-autorises.json`, `portefeuille-modeles-2026-09-28.csv`, `manifest.json`, `data/`. The only change to `skeleton-multi-llm-en.py` is the body of `vote_k_sur_n`.
+`atelier-routage.py`, `atelier-vote.py`, `check_access.py`, `sandbox_sqlite.py`, `verify-data.py`, `schema.sql`, `questions-td1.json`, `modeles-autorises.json`, `kit/portefeuille-modeles-2026-09-28.csv`, `kit/manifest.json`, `data/`. The only change to `skeleton-multi-llm-en.py` is the body of `vote_k_sur_n`.
 
 ## Open blocks
 

@@ -1,6 +1,6 @@
 # TD 2 report: the quorum, then the routing rule
 
-Built on the TD 1 traces only (`traces-td1.csv`, nature real, 2026-10-21). No new network batch was run. The prompts are unchanged since TD 1 (`prompts-en.md`).
+Built on the TD 1 traces only (`traces-td1.csv`, nature real, 2026-10-21). No new network batch was run. The prompts are unchanged since TD 1 (`td1/prompts-en.md`).
 
 ## Done
 
