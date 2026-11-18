@@ -626,23 +626,30 @@ class Orchestrateur:
         """
         n = len(traces_question)
         if not n // 2 < k <= n:
-            raise ValueError(f"k={k} is not a strict majority of n={n}: need {n // 2} < k <= {n}")
-        seen = set()
-        for proposal in traces_question:
-            member = (proposal.provider, proposal.model_requested)
-            if member in seen:
-                raise ValueError(f"duplicate panel member {member[0]}:{member[1]}: a duplicate is not a second vote")
-            seen.add(member)
-        ballots: dict = {}                       # value -> agreeing members, in panel order
-        for proposal in traces_question:
-            if proposal.verdict == "executed" and proposal.value is not None:
-                ballots.setdefault(int(proposal.value), []).append(
-                    f"{proposal.provider}:{proposal.model_requested}")
-        for value, members in ballots.items():
-            if len(members) >= k:                # k > n/2: at most one value can reach it
-                return {"consensus": True, "value": value, "votes": len(members), "models": members}
-        return {"consensus": False, "value": None,
-                "votes": max((len(m) for m in ballots.values()), default=0), "models": []}
+            raise ValueError("Seuil n'est pas une majorité stricte.")
+        doublons = set()
+        for trace in traces_question:
+            provider = trace.provider
+            model = trace.model_requested
+            if (provider,model) in doublons:
+                raise ValueError(f"doublon : {provider}:{model}")
+            doublons.add((provider,model))
+        dico = {}
+        for trace in traces_question:
+            if trace.verdict == "executed" and trace.value is not None:
+                if trace.value not in dico:
+                    dico[trace.value] = []
+                dico[trace.value].append(f"{trace.provider}:{trace.model_requested}")
+        max_voix = 0
+        for membres in dico.values():
+            if len(membres) > max_voix:
+                max_voix = len(membres)
+        for valeur,membres in dico.items():
+            if len(membres) >= k:
+                return {"consensus": True, "value": valeur, "votes": len(membres), "models": membres}
+        return {"consensus": False, "value": None, "votes": max_voix, "models": []}
+
+
 
 
 # ==========================================================================
