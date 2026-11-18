@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """TD 2 contract tests for Orchestrateur.vote_k_sur_n: agreement, disagreement,
 unavailable members, duplicate routes and an invalid threshold. Synthetic
-values (nature = simulation), no network. Writes td2/voting-tests.csv.
+values (nature = simulation), no network. Writes td2/1-vote/voting-tests.csv.
 
-    python3 td2/vote_tests.py
+    python3 td2/1-vote/vote_tests.py
 """
 import csv
 import importlib.util
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 from types import SimpleNamespace
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location("skeleton", ROOT / "skeleton-multi-llm-en.py")
 skeleton = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = skeleton
@@ -46,7 +46,7 @@ TESTS = [
 
 
 def main() -> int:
-    out = ROOT / "td2" / "voting-tests.csv"
+    out = ROOT / "td2" / "1-vote" / "voting-tests.csv"
     failures = 0
     with out.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.writer(stream, lineterminator="\n")
@@ -65,7 +65,7 @@ def main() -> int:
             expected_text = "ValueError (refused)" if expected is ValueError else json.dumps(expected)
             writer.writerow([test_id, "simulation", " ".join(f"{p}:{m}" for p, m in panel), len(panel), k,
                              " ".join("None" if v is None else str(v) for v in values), values.count(None),
-                             expected_text, actual, agreeing, "yes" if passed else "NO", "td2/vote_tests.py"])
+                             expected_text, actual, agreeing, "yes" if passed else "NO", "td2/1-vote/vote_tests.py"])
             print(f"{'PASS' if passed else 'FAIL'}  {test_id:28} {actual}")
     print(f"{len(TESTS) - failures}/{len(TESTS)} tests pass -> {out.relative_to(ROOT)}")
     return 1 if failures else 0

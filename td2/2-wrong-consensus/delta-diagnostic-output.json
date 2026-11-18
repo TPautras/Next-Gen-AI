@@ -1,0 +1,141 @@
+{
+ "C10": {
+  "nature": "real (batch 2026-10-21)",
+  "reference_cents": 558980,
+  "faulty_cells": {
+   "groq:qwen/qwen3.8-27b:C10": 119410,
+   "openrouter:dots-studio/dots-3-note-preview:free:C10": 119410
+  },
+  "shared_wrong_value": 119410,
+  "gap_cents": 439570,
+  "delta_query": "td2/2-wrong-consensus/sql/delta-c10.sql",
+  "delta_rows": [
+   {
+    "side": "missed by the faulty queries",
+    "customer_id": "C004",
+    "birth_date": "2000-09-25",
+    "year_diff": 26,
+    "birthday_passed": 0,
+    "order_lines": 17,
+    "first_order": "2026-01-22 18:06:15",
+    "last_order": "2026-06-15 12:30:11",
+    "revenue_cents": 150260
+   },
+   {
+    "side": "missed by the faulty queries",
+    "customer_id": "C005",
+    "birth_date": "2000-09-26",
+    "year_diff": 26,
+    "birthday_passed": 0,
+    "order_lines": 20,
+    "first_order": "2026-01-06 21:23:30",
+    "last_order": "2026-08-29 23:08:59",
+    "revenue_cents": 150240
+   },
+   {
+    "side": "missed by the faulty queries",
+    "customer_id": "C007",
+    "birth_date": "2000-11-30",
+    "year_diff": 26,
+    "birthday_passed": 0,
+    "order_lines": 18,
+    "first_order": "2026-01-20 15:12:39",
+    "last_order": "2026-08-19 03:45:43",
+    "revenue_cents": 118740
+   },
+   {
+    "side": "missed by the faulty queries",
+    "customer_id": "C022",
+    "birth_date": "2000-08-14",
+    "year_diff": 26,
+    "birthday_passed": 0,
+    "order_lines": 4,
+    "first_order": "2026-04-01 18:17:09",
+    "last_order": "2026-05-25 15:40:34",
+    "revenue_cents": 20330
+   }
+  ],
+  "missed_cents": 439570,
+  "wrongly_added_cents": 0,
+  "lines_where_qwen_and_dots_differ": 0,
+  "lines_matching_qwen_branch_year_diff_24": 0,
+  "independent_python_check": {
+   "C005": 150240,
+   "C007": 118740,
+   "C004": 150260,
+   "C022": 20330
+  },
+  "independent_check_agrees": true
+ },
+ "DEMO-SQL-C11": {
+  "nature": "historical case supplied by the assignment (September 2026 pilot), not our batch",
+  "reference_cents": 446690,
+  "M1_gpt-oss-20b": 0,
+  "M2_north-mini-code": 0,
+  "customers_in_M1_window_birth_date_eq_2001-12-01": 0,
+  "customers_in_M2_window_birth_date_ge_2027-12-01_and_le_2026-12-01": 0,
+  "required_window": "'2000-12-01' < birth_date <= '2001-12-01'",
+  "delta_query": "td2/2-wrong-consensus/sql/delta-demo-sql-c11.sql",
+  "delta_rows": [
+   {
+    "customer_id": "C001",
+    "birth_date": "2001-09-25",
+    "order_lines": 18,
+    "revenue_cents": 135000,
+    "kept_by_m1": 0,
+    "kept_by_m2": 0
+   },
+   {
+    "customer_id": "C002",
+    "birth_date": "2001-09-24",
+    "order_lines": 6,
+    "revenue_cents": 25920,
+    "kept_by_m1": 0,
+    "kept_by_m2": 0
+   },
+   {
+    "customer_id": "C003",
+    "birth_date": "2001-09-26",
+    "order_lines": 6,
+    "revenue_cents": 47900,
+    "kept_by_m1": 0,
+    "kept_by_m2": 0
+   },
+   {
+    "customer_id": "C006",
+    "birth_date": "2001-11-30",
+    "order_lines": 10,
+    "revenue_cents": 77450,
+    "kept_by_m1": 0,
+    "kept_by_m2": 0
+   },
+   {
+    "customer_id": "C008",
+    "birth_date": "2001-05-15",
+    "order_lines": 11,
+    "revenue_cents": 99090,
+    "kept_by_m1": 0,
+    "kept_by_m2": 0
+   },
+   {
+    "customer_id": "C009",
+    "birth_date": "2001-03-10",
+    "order_lines": 9,
+    "revenue_cents": 61330,
+    "kept_by_m1": 0,
+    "kept_by_m2": 0
+   }
+  ],
+  "sum_cents": 446690,
+  "gap_with_shared_value_0": 446690,
+  "independent_python_check": {
+   "C009": 61330,
+   "C001": 135000,
+   "C008": 99090,
+   "C006": 77450,
+   "C003": 47900,
+   "C002": 25920
+  },
+  "independent_check_agrees": true
+ }
+}

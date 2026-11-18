@@ -1,0 +1,1 @@
+Open before-td1-en.html. Your archive is already extracted: continue with environment preparation in kit-td1. The site https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/index.html is the reference and is updated in place; download links refer to the site, not to this offline archive.

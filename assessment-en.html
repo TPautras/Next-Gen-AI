@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Assessment: what is marked and how the mark is computed | ESILV</title><style>
+:root{--ink:#18283d;--blue:#165c79;--line:#cbd7df;--bg:#eef3f6;--paper:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:62px}body{margin:0;color:var(--ink);background:var(--bg);font:17px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#075e83;overflow-wrap:anywhere}header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:2px solid var(--blue)}
+.bar{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 16px;flex-wrap:wrap}.brand{font-size:.86rem;font-weight:700}
+button{font:inherit;min-height:40px;padding:6px 12px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;color:var(--ink)}
+#header-content{padding:0 16px 12px}nav{display:flex;flex-wrap:wrap;gap:6px}nav a{padding:4px 10px;border:1px solid var(--line);border-radius:5px;text-decoration:none;font-size:.85rem;max-width:100%}
+header.collapsed #header-content,header.collapsed .brand{display:none}header.collapsed .bar{justify-content:flex-end}
+main{max-width:1040px;margin:24px auto 50px;background:var(--paper);padding:32px 44px;border-radius:10px}
+h1{font-size:2rem;line-height:1.15;color:var(--blue)}h2{font-size:1.38rem;color:var(--blue);margin:34px 0 12px;border-top:1px solid var(--line);padding-top:16px}h3{font-size:1.12rem}
+section.slide{border-bottom:1px solid var(--line);padding:22px 0;display:block;min-height:0}.slide h1{font-size:1.8rem}.chapitre-tag,.meta,.sub{color:#45566b}.card{border:1px solid var(--line);padding:12px;margin:8px 0;border-radius:6px}.cards,.grid-2,.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px}
+.notice{border-left:5px solid #ba7419;background:#fff4dc;padding:12px 16px;margin:0 0 24px;font-size:.96rem}.notice p{margin:4px 0}.notice.final{border-left-color:#2d7a4f;background:#eef7f1}.notice.pack{border-left-color:#165c79;background:#f4fafc}p,li{max-width:86ch}
+.tableau{overflow-x:auto;max-width:100%;margin:16px 0}table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#e7eff3}pre{overflow-x:auto;padding:16px;background:#edf2f7;border-radius:6px;font-size:.86rem}code{font-family:ui-monospace,monospace;font-size:.91em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}summary{min-height:40px;cursor:pointer;padding:8px 0;font-weight:600}
+blockquote{margin:12px 0;padding:8px 16px;border-left:3px solid var(--line)}.toc{padding:16px;background:#f2f6f8}.toc ul{columns:2;column-gap:32px}.toc li{break-inside:avoid;margin:3px 0}.check{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid #e4eaf0;padding:10px 0}.check input{width:22px;height:22px;flex:none;margin:4px 0}.check label{cursor:pointer}.unit{break-inside:avoid}.evidence{font-size:.9rem;color:#46586d}.pill{display:inline-block;background:#e6f1f4;padding:3px 8px;border-radius:4px;font-size:.83rem}.steps{list-style:none;padding:0;margin:18px 0;counter-reset:pas}.steps>li{counter-increment:pas;display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:10px 0;background:#fbfdfe;break-inside:avoid}.steps>li::before{content:counter(pas);flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:1.05rem;display:flex;align-items:center;justify-content:center}.steps .body{flex:1 1 auto;min-width:0}.steps .what{font-weight:700;font-size:1.02rem}.steps .what svg{vertical-align:-4px;margin-right:8px}.steps .how{margin:5px 0 0}.steps .ok{margin:7px 0 0;font-size:.93rem;border-left:4px solid #2d7a4f;background:#eef7f1;padding:6px 10px;border-radius:0 5px 5px 0}.steps .ko{margin:5px 0 0;font-size:.93rem;border-left:4px solid #ba7419;background:#fff4dc;padding:6px 10px;border-radius:0 5px 5px 0}.steps .time{display:inline-block;background:#e6f1f4;padding:2px 8px;border-radius:4px;font-size:.82rem;font-weight:600}.gate{border:2px solid var(--blue);border-radius:8px;padding:14px 18px;margin:22px 0;background:#f4fafc}.gate p{margin:5px 0}.gate .flag{font-weight:700;color:var(--blue)}@media(max-width:700px){.steps>li{gap:11px;padding:12px}.steps>li::before{flex-basis:32px;width:32px;height:32px;font-size:.95rem}}@media print{.steps>li{background:#fff}.gate{background:#fff}}footer{max-width:1040px;margin:auto;padding:0 24px 28px;font-size:.85rem;color:#495d70}
+@media(max-width:700px){body{font-size:16px}main{margin:10px 6px;padding:20px 15px}h1{font-size:1.6rem}.toc ul{columns:1}.bar{padding:3px 10px}#header-content{padding:0 10px 10px}}
+@media print{header,.toc,.self-check-help,footer{display:none}body{background:white;font-size:10pt;line-height:1.35}main{padding:0;margin:0;border-radius:0;max-width:none}h1{font-size:20pt}h2{font-size:14pt;break-after:avoid;margin-top:18pt}h3{font-size:12pt;break-after:avoid}thead{display:table-header-group;break-after:avoid}p,li,tr,.check{break-inside:avoid}.tableau{overflow:visible}table{font-size:8.3pt}th,td{padding:5pt}pre{white-space:pre-wrap;overflow:visible}a{color:inherit;text-decoration:none}.notice{border:1pt solid #aaa;background:#fff}.unit{break-inside:auto}.check input{display:none}footer{font-size:8pt;padding:12pt 0}section.slide{break-before:page}.slide:first-of-type{break-before:auto}@page{size:A4;margin:17mm;@bottom-right{content:counter(page);font-size:8pt;color:#526477}}}
+
+.llm-note{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media print{.llm-note{display:none!important}}
+
+a.download{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;background:#165c79;color:#fff;border-radius:5px;font-weight:700;text-decoration:none}
+</style><link rel="alternate" type="text/plain" title="Site map for AI assistants" href="../llms.txt"><link rel="alternate" type="text/markdown" title="Full student content in one file" href="../llms-full.md"></head>
+<body><header><div class="bar"><span class="brand">ESILV · Trustworthy Generative AI · 2026-11-18-students-5</span><button id="header-toggle" aria-expanded="true" aria-controls="header-content">Collapse header</button></div><div id="header-content"><nav aria-label="Resource navigation"><a href="../index.html">Home</a><a href="before-td1-en.html">Before TD 1</a><a href="start-here-en.html">Resources</a><a href="assessment-en.html">Assessment</a><a href="submission-en.html">Hand-in</a><a href="reference-values-td1-en.html">TD 1 reference values</a><a href="resource-index-en.html">Files</a></nav></div></header>
+<main><p class="llm-note" aria-hidden="true">Machine-readable versions of this site: site map with full URLs and direct section links, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms.txt; full student content in one file, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms-full.md.</p><h1 id="section-1">Assessment: what is marked and how the mark is computed</h1><aside class="notice"><p><strong>Beta · 2026-11-18-students-5, 18 November 2026</strong></p><p>Beta: this resource may still change before its session. The site is updated in place; the pack version above identifies what you read.</p></aside><details class="toc"><summary>Contents (13 sections)</summary><ul><li><a href="#section-2">How your mark is built</a></li><li><a href="#section-3">TD 1 - 21 October 2026 - Comparing models on the same questions</a></li><li><a href="#section-4">TD 2 - 18 November 2026 - The quorum, then the routing rule</a></li><li><a href="#section-5">TD 3 - 11 December 2026 - Quantifying and deciding</a></li><li><a href="#section-6">Sub-group mark</a></li><li><a href="#section-7">Hand-in after each TD</a></li><li><a href="#section-8">Final mark</a></li><li><a href="#section-9">Where code is marked</a></li><li><a href="#section-10">Status</a></li><li><a href="#section-11">How the levels are applied</a></li><li><a href="#section-12">The end-of-session quiz</a></li><li><a href="#section-13">Fictional worked example</a></li><li><a href="#section-14">Code and AI assistance</a></li></ul></details>
+<p>Pack 2026-11-18-students-5, 18 November 2026. This page is the assessment of the module: what your sub-group shows in each session, how the sub-group mark is computed, what each hand-in must hold, the individual quiz that closes each lab session and the final mark. No range, no half point, no discretionary bonus: two instructors who see the same evidence read the same level.</p>
+<p>Changes, dated: 18 October 2026, the school approved the final mark at 70 % sub-group and 30 % quizzes. 20 October 2026, sub-groups of six to eight within each DIA; no hand-in points and no video, so the sub-group mark is the nine outcomes out of 18, brought to 20; a hand-in after each TD by 23:59 Paris time on the following Sunday; the basics of the code and their effect.</p>
+<p>A PDF copy of this assessment is available: <a href="assessment-en.pdf">assessment-en.pdf</a>.</p>
+<ul>
+<li>Sub-group: six to eight members within your DIA, 33 sub-groups for the 228 students; one shared sub-group mark.</li>
+<li>Instructor: marks each outcome at the end of the session, on what the sub-group has shown.</li>
+<li>Quiz: one individual fifteen-minute quiz on Moodle at the end of each TD.</li>
+<li>Hand-in: after each TD, the sub-group commits its work to its public Git repository and records the commit in Moodle, by 23:59 Paris time on the following Sunday. No video.</li>
+</ul>
+<h2 id="section-2">How your mark is built</h2>
+<ul>
+<li><strong>Nine outcomes, 2 points each, marked at the end of each session: 18 points.</strong> Three outcomes per session, one mark per outcome: 0, 1 or 2. Nothing in between.</li>
+<li><strong>Sub-group mark out of 20: the sum of the nine outcomes, out of 18, multiplied by 20 and divided by 18.</strong> There are no hand-in points and no video: the repository confirms the session marks. It is a sum of levels, so you can compute it yourself at any time.</li>
+<li><strong>An outcome marked 2 whose evidence is absent from the session's repository drops to 1. No session mark ever rises after the session: the repository confirms, it does not re-mark.</strong></li>
+<li><strong>A blocking bug, or a design without the basics of software, costs points on the sub-group mark.</strong> Programming style is not marked; the basics are listed below.</li>
+<li><strong>The six to eight members of a sub-group receive the same sub-group mark.</strong></li>
+<li><strong>One individual quiz at the end of each TD</strong>: ten questions, fifteen minutes, one correct answer out of four, no negative marking, mark out of 20.</li>
+<li><strong>Final mark out of 20: 70 % of the sub-group mark plus 30 % of the mean of the three quizzes.</strong> No oral presentation and no oral adjustment.</li>
+</ul>
+<h2 id="section-3">TD 1 - 21 October 2026 - Comparing models on the same questions</h2>
+<div class="tableau"><table>
+<thead>
+<tr><th>Outcome</th><th>What you show</th><th>0</th><th>1</th><th>2</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>R1</strong>. An independent, checked reference</td><td><code>reference-td1.csv</code> on screen, twenty rows, each with the query that produced its value.</td><td>Fewer than twenty rows, or a value that comes from a model instead of the database.</td><td>Twenty runnable queries; a value still differs from the answer key, or the convention and independent check are not explained.</td><td>Twenty correct values, an explained convention and an independent check shown, on the first attempt or after a correction.</td></tr>
+<tr><td><strong>R2</strong>. One trace line per call</td><td>A trace selected by the instructor, its prompt fingerprint and its attempts.</td><td>No trace file, or lines written by hand after the calls, or one line per question instead of one per call.</td><td>One automatic row per call to the five models, all attempts retained; fallback cells are identified.</td><td>In addition: you explain the selected trace, the common fingerprint per question, and a missing measurement or a retry if present. Missing and zero differ; a retry is not required.</td></tr>
+<tr><td><strong>R3</strong>. The cause of a failure, read from the trace</td><td>A cell and its evidence; the instructor supplies an example if the batch has none. Historical real, replayed or simulated nature is explicit.</td><td>No cause, or an impression ("this model is weak").</td><td>The cause of the cell pointed at, read from the returned SQL or from the HTTP status.</td><td>In addition: you explain a failed access and distinguish it from a wrong answer. A supplied example gives access to the same level; no failure is required in your batch.</td></tr>
+</tbody>
+</table></div>
+<p><strong>Session mark / 6</strong> = R1 + R2 + R3. Your instructor gives your sub-group its three levels and one next fix before the end of the session. Repository commit recorded in Moodle by Sunday 25 October 2026, 23:59.</p>
+<h2 id="section-4">TD 2 - 18 November 2026 - The quorum, then the routing rule</h2>
+<div class="tableau"><table>
+<thead>
+<tr><th>Outcome</th><th>What you show</th><th>0</th><th>1</th><th>2</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Q1</strong>. A vote that abstains</td><td><code>atelier-vote.py</code> run in front of the instructor on one question where no value has a majority.</td><td>The vote does not run, or it keeps a value without a majority.</td><td>The vote runs, returns the value that reaches a strict majority and abstains when none does.</td><td>In addition: an unavailable member stays in n without voting, and two accesses to the same provider and model pair count as one vote.</td></tr>
+<tr><td><strong>Q2</strong>. A wrong consensus, explained</td><td>An identified batch case or instructor-supplied historical real or synthetic case: agreeing values, independent reference, declared panel and k-of-n threshold.</td><td>The available or supplied case is not explained, or it does not show a wrong agreement.</td><td>At least two models return the same wrong value; you show the reference and distinguish that agreement from the declared quorum result.</td><td>In addition: you explain the cause in the SQL and an independent check able to detect it. No wrong agreement in your own batch does not cap the mark.</td></tr>
+<tr><td><strong>Q3</strong>. A routing rule tied to the TD 1 table</td><td>The one-page rule; the instructor points at one line and asks which cell of the TD 1 table justifies it.</td><td>No written rule, or a rule that sends every question to the same model.</td><td>One line per question family, each with the first model called and the check retained.</td><td>In addition: the line pointed at cites the TD 1 cell that justifies it, and the rule says what to do when the first model is unavailable: next model, deferral, abstention.</td></tr>
+</tbody>
+</table></div>
+<p><strong>Session mark / 6</strong> = Q1 + Q2 + Q3. Your instructor gives your sub-group its three levels and one next fix before the end of the session. Repository commit recorded in Moodle by Sunday 22 November 2026, 23:59.</p>
+<h2 id="section-5">TD 3 - 11 December 2026 - Quantifying and deciding</h2>
+<div class="tableau"><table>
+<thead>
+<tr><th>Outcome</th><th>What you show</th><th>0</th><th>1</th><th>2</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>C1</strong>. Two cost columns that do not mix</td><td>The configuration table on screen.</td><td>One cost column only, or a zero presented as a measurement.</td><td>Real spend and API equivalent separated for at least three configurations, costed or N/A with a documented reason.</td><td>In addition: dated, sourced prices for the same model, missing measurements preserved, coverage stated; a known subtotal is not presented as a complete total.</td></tr>
+<tr><td><strong>C2</strong>. A decision derived from the cost of an error</td><td>The named use case and the configuration you recommend.</td><td>No use case named, or the most capable model chosen without a reason.</td><td>A use case named, what an error costs in it, and a configuration recommended.</td><td>In addition: the recommendation cites cost per question or its justified unavailability, and the frequency observed in the batch.</td></tr>
+<tr><td><strong>C3</strong>. Written limits</td><td>The third slide.</td><td>No limits written.</td><td>What your twenty questions do not cover is written down.</td><td>In addition: simulator assumptions are explicit; twenty questions establish neither a general rate, a permanent ranking nor an error bound guaranteed by quorum.</td></tr>
+</tbody>
+</table></div>
+<p><strong>Session mark / 6</strong> = C1 + C2 + C3. Your instructor gives your sub-group its three levels and one next fix before the end of the session. Repository commit recorded in Moodle by Sunday 13 December 2026, 23:59.</p>
+<h2 id="section-6">Sub-group mark</h2>
+<p><strong>Sub-group mark / 20</strong> = (TD 1 + TD 2 + TD 3) × 20 / 18.</p>
+<h2 id="section-7">Hand-in after each TD</h2>
+<p>After each TD, the sub-group commits its work to its public Git repository and records the commit in Moodle, by 23:59 Paris time on the following Sunday. No video.</p>
+<ul>
+<li>TD 1: Sunday 25 October 2026, 23:59</li>
+<li>TD 2: Sunday 22 November 2026, 23:59</li>
+<li>TD 3: Sunday 13 December 2026, 23:59</li>
+</ul>
+<h2 id="section-8">Final mark</h2>
+<p>Final mark / 20 = 0.7 × sub-group mark + 0.3 × mean of the three quizzes. Example: outcomes summing to 9 out of 18, sub-group mark 9 × 20 / 18 = 10; quizzes 12, 14 and 16, mean 14: 0.7 × 10 + 0.3 × 14 = 11.2.</p>
+<h2 id="section-9">Where code is marked</h2>
+<ul>
+<li>Programming style is not marked.</li>
+<li>A blocking bug, or a design without the basics of software, costs points on the sub-group mark. The basics are listed below.</li>
+<li>The repository review applies this list with the help of an AI.</li>
+<li>How the system behaves is marked by Q1: 2 points out of 18. Observable evidence: the vote runs in front of the instructor, abstains without a majority, keeps the unavailable member in n.</li>
+<li>Reading and criticising code is marked by R3 and Q2: 4 points out of 18. Observable evidence: the cause of a failure and the cause of a wrong consensus, read from the returned SQL.</li>
+<li>AI-assisted code is allowed, as is code written by hand: the sub-group declares the use, remains responsible for every line and can explain it. A reference value comes from SQL executed on the database and an independent check, never from adopting an LLM answer.</li>
+<li>The basics of the code:</li>
+<li>Models and parameters read from a configuration file, no model hard-coded.</li>
+<li>One common interface for the model clients.</li>
+<li>Handling of network and access errors.</li>
+<li>One trace line per call.</li>
+<li>A README whose commands replay the work.</li>
+<li>No secret in the repository.</li>
+</ul>
+<h2 id="section-10">Status</h2>
+<p>Final mark of 70 % sub-group and 30 % quizzes approved by the school on 18 October 2026. Sub-groups of six to eight, a sub-group mark out of 18 brought to 20 with no hand-in points, the hand-in after each TD and the code basics: teaching-team decisions of 20 October 2026.</p>
+<h2 id="section-11">How the levels are applied</h2>
+<p>The instructor marks what has been shown on screen, not what is announced or promised for later. Level 2 requires the evidence described for that outcome, including the supplied examples explicitly accepted by R3 and Q2. A doubt between two levels is settled by asking for the missing evidence before the end of the session; if it is not shown, the lower level applies.</p>
+<p>A weak model result, an abstention or a negative gain from voting can still earn full marks: the outcomes reward the method, never the raw success rate of a model. Neither buying access nor using a more expensive model earns a point. An unavailable provider leads to a documented block and to the replay traces supplied by the instructor; a replay line is marked like a real line and loses no point.</p>
+<p>R1 level 2 accepts twenty correct references on the first attempt, with an explained convention and independent check. R2 asks for an explanation of a selected trace, its common fingerprint and a missing measurement or retry if present; no retry is required. When a batch has no failure or wrong agreement, use an identified supplied case for R3 or Q2. Its nature stays separate from measured batch counts.</p>
+<h2 id="section-12">The end-of-session quiz</h2>
+<p>The quiz opens during the last fifteen minutes of each lab session and closes at the end of the session: one attempt, questions and answers in random order. Four questions bear on the lecture of the day, six on the lab session of the day. Answer alone, with no messages and no AI tool. Your mark and the correction appear after the quiz closes.</p>
+<h2 id="section-13">Fictional worked example</h2>
+<p>A sub-group is marked 2, 1, 1 in TD 1 (four points), 2, 1, 1 in TD 2 (four points) and 1, 1, 0 in TD 3 (two points): ten out of eighteen. One outcome marked 2 in TD 2 has no evidence in the TD 2 repository: it drops to 1, so nine out of eighteen. Brought to twenty: 9 × 20 / 18 = 10. <strong>Sub-group mark: ten out of twenty</strong>, the same for all the members of the sub-group. A member whose three quizzes score 12, 14 and 16 (mean 14) gets 0.7 × 10 + 0.3 × 14 = <strong>11.2 out of 20</strong>.</p>
+<h2 id="section-14">Code and AI assistance</h2>
+<p>Programming style is not marked. A blocking bug, or a design without the basics of software, costs points on the sub-group mark: models and parameters read from a configuration file, no model hard-coded; one common interface for the model clients; handling of network and access errors; one trace line per call; a README whose commands replay the work; no secret in the repository. The repository review applies this list with the help of an AI.</p>
+<p>AI-assisted code is allowed, as is code written by hand: your sub-group remains responsible for every line and can explain it. The prompts used, for the experiment as for the coding help, are kept in the repository as they were used.</p></main><footer>Didier Parisot · ESILV · Pack 2026-11-18-students-5.</footer><script>
+(()=>{'use strict';const header=document.querySelector('header'),button=document.getElementById('header-toggle');
+const key='esilv-beta-header:'+location.pathname;let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+function setHeader(collapsed){header.classList.toggle('collapsed',collapsed);button.setAttribute('aria-expanded',String(!collapsed));button.textContent=collapsed?'Expand header':'Collapse header';document.documentElement.style.scrollPaddingTop=(header.offsetHeight+12)+'px';}
+setHeader(saved===null?matchMedia('(max-width:700px)').matches:saved==='collapsed');button.addEventListener('click',()=>{const c=!header.classList.contains('collapsed');setHeader(c);try{localStorage.setItem(key,c?'collapsed':'expanded')}catch(e){}});
+addEventListener('resize',()=>setHeader(header.classList.contains('collapsed')));
+document.querySelectorAll('input[data-check]').forEach(box=>{const k='esilv-beta-review-1:'+location.pathname+':'+box.dataset.check;try{box.checked=localStorage.getItem(k)==='1'}catch(e){}box.addEventListener('change',()=>{try{localStorage.setItem(k,box.checked?'1':'0')}catch(e){}})});
+})();
+</script></body></html>

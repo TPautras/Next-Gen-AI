@@ -11,14 +11,14 @@
    difference 26 (birthday not yet reached). A correct query returns both lines;
    the two agreeing queries return only the first one.
 
-    python3 td2/wrong_consensus_check.py
+    python3 td2/2-wrong-consensus/wrong_consensus_check.py
 """
 import csv
 import json
 import sqlite3
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 CASE = "C10"
 
 with (ROOT / "traces-td1.csv").open(newline="", encoding="utf-8") as stream:

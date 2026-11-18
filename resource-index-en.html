@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Files | ESILV</title><style>
+:root{--ink:#18283d;--blue:#165c79;--line:#cbd7df;--bg:#eef3f6;--paper:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:62px}body{margin:0;color:var(--ink);background:var(--bg);font:17px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#075e83;overflow-wrap:anywhere}header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:2px solid var(--blue)}
+.bar{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 16px;flex-wrap:wrap}.brand{font-size:.86rem;font-weight:700}
+button{font:inherit;min-height:40px;padding:6px 12px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;color:var(--ink)}
+#header-content{padding:0 16px 12px}nav{display:flex;flex-wrap:wrap;gap:6px}nav a{padding:4px 10px;border:1px solid var(--line);border-radius:5px;text-decoration:none;font-size:.85rem;max-width:100%}
+header.collapsed #header-content,header.collapsed .brand{display:none}header.collapsed .bar{justify-content:flex-end}
+main{max-width:1040px;margin:24px auto 50px;background:var(--paper);padding:32px 44px;border-radius:10px}
+h1{font-size:2rem;line-height:1.15;color:var(--blue)}h2{font-size:1.38rem;color:var(--blue);margin:34px 0 12px;border-top:1px solid var(--line);padding-top:16px}h3{font-size:1.12rem}
+section.slide{border-bottom:1px solid var(--line);padding:22px 0;display:block;min-height:0}.slide h1{font-size:1.8rem}.chapitre-tag,.meta,.sub{color:#45566b}.card{border:1px solid var(--line);padding:12px;margin:8px 0;border-radius:6px}.cards,.grid-2,.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px}
+.notice{border-left:5px solid #ba7419;background:#fff4dc;padding:12px 16px;margin:0 0 24px;font-size:.96rem}.notice p{margin:4px 0}.notice.final{border-left-color:#2d7a4f;background:#eef7f1}.notice.pack{border-left-color:#165c79;background:#f4fafc}p,li{max-width:86ch}
+.tableau{overflow-x:auto;max-width:100%;margin:16px 0}table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#e7eff3}pre{overflow-x:auto;padding:16px;background:#edf2f7;border-radius:6px;font-size:.86rem}code{font-family:ui-monospace,monospace;font-size:.91em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}summary{min-height:40px;cursor:pointer;padding:8px 0;font-weight:600}
+blockquote{margin:12px 0;padding:8px 16px;border-left:3px solid var(--line)}.toc{padding:16px;background:#f2f6f8}.toc ul{columns:2;column-gap:32px}.toc li{break-inside:avoid;margin:3px 0}.check{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid #e4eaf0;padding:10px 0}.check input{width:22px;height:22px;flex:none;margin:4px 0}.check label{cursor:pointer}.unit{break-inside:avoid}.evidence{font-size:.9rem;color:#46586d}.pill{display:inline-block;background:#e6f1f4;padding:3px 8px;border-radius:4px;font-size:.83rem}.steps{list-style:none;padding:0;margin:18px 0;counter-reset:pas}.steps>li{counter-increment:pas;display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:10px 0;background:#fbfdfe;break-inside:avoid}.steps>li::before{content:counter(pas);flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:1.05rem;display:flex;align-items:center;justify-content:center}.steps .body{flex:1 1 auto;min-width:0}.steps .what{font-weight:700;font-size:1.02rem}.steps .what svg{vertical-align:-4px;margin-right:8px}.steps .how{margin:5px 0 0}.steps .ok{margin:7px 0 0;font-size:.93rem;border-left:4px solid #2d7a4f;background:#eef7f1;padding:6px 10px;border-radius:0 5px 5px 0}.steps .ko{margin:5px 0 0;font-size:.93rem;border-left:4px solid #ba7419;background:#fff4dc;padding:6px 10px;border-radius:0 5px 5px 0}.steps .time{display:inline-block;background:#e6f1f4;padding:2px 8px;border-radius:4px;font-size:.82rem;font-weight:600}.gate{border:2px solid var(--blue);border-radius:8px;padding:14px 18px;margin:22px 0;background:#f4fafc}.gate p{margin:5px 0}.gate .flag{font-weight:700;color:var(--blue)}@media(max-width:700px){.steps>li{gap:11px;padding:12px}.steps>li::before{flex-basis:32px;width:32px;height:32px;font-size:.95rem}}@media print{.steps>li{background:#fff}.gate{background:#fff}}footer{max-width:1040px;margin:auto;padding:0 24px 28px;font-size:.85rem;color:#495d70}
+@media(max-width:700px){body{font-size:16px}main{margin:10px 6px;padding:20px 15px}h1{font-size:1.6rem}.toc ul{columns:1}.bar{padding:3px 10px}#header-content{padding:0 10px 10px}}
+@media print{header,.toc,.self-check-help,footer{display:none}body{background:white;font-size:10pt;line-height:1.35}main{padding:0;margin:0;border-radius:0;max-width:none}h1{font-size:20pt}h2{font-size:14pt;break-after:avoid;margin-top:18pt}h3{font-size:12pt;break-after:avoid}thead{display:table-header-group;break-after:avoid}p,li,tr,.check{break-inside:avoid}.tableau{overflow:visible}table{font-size:8.3pt}th,td{padding:5pt}pre{white-space:pre-wrap;overflow:visible}a{color:inherit;text-decoration:none}.notice{border:1pt solid #aaa;background:#fff}.unit{break-inside:auto}.check input{display:none}footer{font-size:8pt;padding:12pt 0}section.slide{break-before:page}.slide:first-of-type{break-before:auto}@page{size:A4;margin:17mm;@bottom-right{content:counter(page);font-size:8pt;color:#526477}}}
+
+.llm-note{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media print{.llm-note{display:none!important}}
+
+a.download{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;background:#165c79;color:#fff;border-radius:5px;font-weight:700;text-decoration:none}
+</style><link rel="alternate" type="text/plain" title="Site map for AI assistants" href="../llms.txt"><link rel="alternate" type="text/markdown" title="Full student content in one file" href="../llms-full.md"></head>
+<body><header><div class="bar"><span class="brand">ESILV · Trustworthy Generative AI · 2026-11-18-students-5</span><button id="header-toggle" aria-expanded="true" aria-controls="header-content">Collapse header</button></div><div id="header-content"><nav aria-label="Resource navigation"><a href="../index.html">Home</a><a href="before-td1-en.html">Before TD 1</a><a href="start-here-en.html">Resources</a><a href="assessment-en.html">Assessment</a><a href="submission-en.html">Hand-in</a><a href="reference-values-td1-en.html">TD 1 reference values</a><a href="resource-index-en.html">Files</a></nav></div></header>
+<main><p class="llm-note" aria-hidden="true">Machine-readable versions of this site: site map with full URLs and direct section links, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms.txt; full student content in one file, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms-full.md.</p><h1 id="section-1">Files</h1><aside class="notice"><p><strong>Beta · 2026-11-18-students-5, 18 November 2026</strong></p><p>Beta: this resource may still change before its session. The site is updated in place; the pack version above identifies what you read.</p></aside>
+<p>Pack 2026-11-18-students-5. Every file of the site, with its role. The manifest records the size and SHA-256 fingerprint of each file.</p>
+<div class="tableau"><table>
+<thead>
+<tr><th>File</th><th>Role</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="OPEN-FIRST.txt">OPEN-FIRST.txt</a></td><td>Student archive entry instructions</td></tr>
+<tr><td><a href="assessment-en.html">assessment-en.html</a></td><td>Assessment sheet and marking rules; single source acquis-seance.json; rendered as standalone HTML</td></tr>
+<tr><td><a href="assessment-en.md">assessment-en.md</a></td><td>Assessment sheet and marking rules; single source acquis-seance.json</td></tr>
+<tr><td><a href="assessment-en.pdf">assessment-en.pdf</a></td><td>Printable PDF of assessment-en</td></tr>
+<tr><td><a href="before-td1-en.html">before-td1-en.html</a></td><td>Preparation page: the steps before and during TD 1, with the observable result of each; rendered as standalone HTML</td></tr>
+<tr><td><a href="before-td1-en.md">before-td1-en.md</a></td><td>Preparation page: the steps before and during TD 1, with the observable result of each</td></tr>
+<tr><td><a href="kit-td1/.gitignore">kit-td1/.gitignore</a></td><td>Kit file: .gitignore; byte-identical</td></tr>
+<tr><td><a href="kit-td1/README.html">kit-td1/README.html</a></td><td>Kit file: README.md; Final; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/README.md">kit-td1/README.md</a></td><td>Kit file: README.md; Final</td></tr>
+<tr><td><a href="kit-td1/atelier-routage.py">kit-td1/atelier-routage.py</a></td><td>Kit file: atelier-routage.py; byte-identical</td></tr>
+<tr><td><a href="kit-td1/atelier-vote.py">kit-td1/atelier-vote.py</a></td><td>Kit file: atelier-vote.py; byte-identical</td></tr>
+<tr><td><a href="kit-td1/check_access.py">kit-td1/check_access.py</a></td><td>Kit file: check_access.py; byte-identical</td></tr>
+<tr><td><a href="kit-td1/comparison-example-en.html">kit-td1/comparison-example-en.html</a></td><td>Kit file: comparison-example-en.md; Beta; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/comparison-example-en.md">kit-td1/comparison-example-en.md</a></td><td>Kit file: comparison-example-en.md; Beta</td></tr>
+<tr><td><a href="kit-td1/consigne-etudiante-en.html">kit-td1/consigne-etudiante-en.html</a></td><td>Kit file: consigne-etudiante-en.md; Final; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/consigne-etudiante-en.md">kit-td1/consigne-etudiante-en.md</a></td><td>Kit file: consigne-etudiante-en.md; Final</td></tr>
+<tr><td><a href="kit-td1/data/boutique.sqlite">kit-td1/data/boutique.sqlite</a></td><td>Kit file: data/boutique.sqlite; byte-identical</td></tr>
+<tr><td><a href="kit-td1/data/customers.csv">kit-td1/data/customers.csv</a></td><td>Kit file: data/customers.csv; byte-identical</td></tr>
+<tr><td><a href="kit-td1/data/manifest.json">kit-td1/data/manifest.json</a></td><td>Kit file: data/manifest.json; byte-identical</td></tr>
+<tr><td><a href="kit-td1/data/orders.csv">kit-td1/data/orders.csv</a></td><td>Kit file: data/orders.csv; byte-identical</td></tr>
+<tr><td><a href="kit-td1/data/product.csv">kit-td1/data/product.csv</a></td><td>Kit file: data/product.csv; byte-identical</td></tr>
+<tr><td><a href="kit-td1/enonce-td1-en.html">kit-td1/enonce-td1-en.html</a></td><td>Kit file: enonce-td1-en.md; Final; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/enonce-td1-en.md">kit-td1/enonce-td1-en.md</a></td><td>Kit file: enonce-td1-en.md; Final</td></tr>
+<tr><td><a href="kit-td1/enonce-td1-en.pdf">kit-td1/enonce-td1-en.pdf</a></td><td>Printable PDF of kit-td1/enonce-td1-en</td></tr>
+<tr><td><a href="kit-td1/enonce-td2-en.html">kit-td1/enonce-td2-en.html</a></td><td>Kit file: enonce-td2-en.md; Final; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/enonce-td2-en.md">kit-td1/enonce-td2-en.md</a></td><td>Kit file: enonce-td2-en.md; Final</td></tr>
+<tr><td><a href="kit-td1/enonce-td2-en.pdf">kit-td1/enonce-td2-en.pdf</a></td><td>Printable PDF of kit-td1/enonce-td2-en</td></tr>
+<tr><td><a href="kit-td1/enonce-td3-en.html">kit-td1/enonce-td3-en.html</a></td><td>Kit file: enonce-td3-en.md; Beta; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/enonce-td3-en.md">kit-td1/enonce-td3-en.md</a></td><td>Kit file: enonce-td3-en.md; Beta</td></tr>
+<tr><td><a href="kit-td1/enonce-td3-en.pdf">kit-td1/enonce-td3-en.pdf</a></td><td>Printable PDF of kit-td1/enonce-td3-en</td></tr>
+<tr><td><a href="kit-td1/five-model-summary-en.csv">kit-td1/five-model-summary-en.csv</a></td><td>Kit file: five-model-summary-en.csv; byte-identical</td></tr>
+<tr><td><a href="kit-td1/guide-environnement-etudiant-en.html">kit-td1/guide-environnement-etudiant-en.html</a></td><td>Kit file: guide-environnement-etudiant-en.md; Final; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/guide-environnement-etudiant-en.md">kit-td1/guide-environnement-etudiant-en.md</a></td><td>Kit file: guide-environnement-etudiant-en.md; Final</td></tr>
+<tr><td><a href="kit-td1/manifest.json">kit-td1/manifest.json</a></td><td>Manifest of the runnable kit after transformations</td></tr>
+<tr><td><a href="kit-td1/methode-cout-en.html">kit-td1/methode-cout-en.html</a></td><td>Kit file: methode-cout-en.md; Beta; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/methode-cout-en.md">kit-td1/methode-cout-en.md</a></td><td>Kit file: methode-cout-en.md; Beta</td></tr>
+<tr><td><a href="kit-td1/methode-cout-en.pdf">kit-td1/methode-cout-en.pdf</a></td><td>Printable PDF of kit-td1/methode-cout-en</td></tr>
+<tr><td><a href="kit-td1/model-question-comparison-en.csv">kit-td1/model-question-comparison-en.csv</a></td><td>Kit file: model-question-comparison-en.csv; byte-identical</td></tr>
+<tr><td><a href="kit-td1/modeles-autorises.json">kit-td1/modeles-autorises.json</a></td><td>Kit file: modeles-autorises.json; byte-identical</td></tr>
+<tr><td><a href="kit-td1/portefeuille-modeles-2026-09-28.csv">kit-td1/portefeuille-modeles-2026-09-28.csv</a></td><td>Kit file: portefeuille-modeles-2026-09-28.csv; byte-identical</td></tr>
+<tr><td><a href="kit-td1/portefeuille-modeles-en.html">kit-td1/portefeuille-modeles-en.html</a></td><td>Kit file: portefeuille-modeles-en.md; Beta; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/portefeuille-modeles-en.md">kit-td1/portefeuille-modeles-en.md</a></td><td>Kit file: portefeuille-modeles-en.md; Beta</td></tr>
+<tr><td><a href="kit-td1/questions-td1-en.html">kit-td1/questions-td1-en.html</a></td><td>Kit file: questions-td1-en.md; Final; rendered as standalone HTML</td></tr>
+<tr><td><a href="kit-td1/questions-td1-en.md">kit-td1/questions-td1-en.md</a></td><td>Kit file: questions-td1-en.md; Final</td></tr>
+<tr><td><a href="kit-td1/questions-td1.json">kit-td1/questions-td1.json</a></td><td>Kit file: questions-td1.json; byte-identical</td></tr>
+<tr><td><a href="kit-td1/reference-td1.csv">kit-td1/reference-td1.csv</a></td><td>Kit file: reference-td1.csv; byte-identical</td></tr>
+<tr><td><a href="kit-td1/sandbox_sqlite.py">kit-td1/sandbox_sqlite.py</a></td><td>Kit file: sandbox_sqlite.py; byte-identical</td></tr>
+<tr><td><a href="kit-td1/schema.sql">kit-td1/schema.sql</a></td><td>Kit file: schema.sql; byte-identical</td></tr>
+<tr><td><a href="kit-td1/skeleton-multi-llm-en.py">kit-td1/skeleton-multi-llm-en.py</a></td><td>Kit file: skeleton-multi-llm-en.py; byte-identical</td></tr>
+<tr><td><a href="kit-td1/verify-data.py">kit-td1/verify-data.py</a></td><td>Offline data-integrity helper; no model calls or reference answers</td></tr>
+<tr><td><a href="lectures/cm1-en.html">lectures/cm1-en.html</a></td><td>Lecture 1, reading copy of the slides; synthetic revenue values</td></tr>
+<tr><td><a href="lectures/cm2-en.html">lectures/cm2-en.html</a></td><td>Lecture 2, reading copy of the slides</td></tr>
+<tr><td><a href="lectures/cm3-en.html">lectures/cm3-en.html</a></td><td>Lecture 3, reading copy of the slides</td></tr>
+<tr><td><a href="reference-values-td1-en.html">reference-values-td1-en.html</a></td><td>TD 1 reference values, generated from the teacher answer key and the kit questions; rendered as standalone HTML</td></tr>
+<tr><td><a href="reference-values-td1-en.md">reference-values-td1-en.md</a></td><td>TD 1 reference values, generated from the teacher answer key and the kit questions</td></tr>
+<tr><td><a href="start-here-en.html">start-here-en.html</a></td><td>Student guide; rendered as standalone HTML</td></tr>
+<tr><td><a href="start-here-en.md">start-here-en.md</a></td><td>Student guide</td></tr>
+<tr><td><a href="submission-en.html">submission-en.html</a></td><td>Student guide; rendered as standalone HTML</td></tr>
+<tr><td><a href="submission-en.md">submission-en.md</a></td><td>Student guide</td></tr>
+<tr><td><a href="syllabus-en.html">syllabus-en.html</a></td><td>Syllabus; rendered as standalone HTML</td></tr>
+<tr><td><a href="syllabus-en.md">syllabus-en.md</a></td><td>Syllabus</td></tr>
+<tr><td><a href="syllabus-en.pdf">syllabus-en.pdf</a></td><td>Printable PDF of syllabus-en</td></tr>
+<tr><td><a href="templates/README-en.html">templates/README-en.html</a></td><td>Index of blank hand-in worksheets; rendered as standalone HTML</td></tr>
+<tr><td><a href="templates/README-en.md">templates/README-en.md</a></td><td>Index of blank hand-in worksheets</td></tr>
+<tr><td><a href="templates/configuration-comparison-en.csv">templates/configuration-comparison-en.csv</a></td><td>Blank hand-in worksheet; no prefilled answers</td></tr>
+<tr><td><a href="templates/contributions-en.csv">templates/contributions-en.csv</a></td><td>Blank hand-in worksheet; no prefilled answers</td></tr>
+<tr><td><a href="templates/cost-calculation-en.csv">templates/cost-calculation-en.csv</a></td><td>Blank hand-in worksheet; no prefilled answers</td></tr>
+<tr><td><a href="templates/five-model-summary-en.csv">templates/five-model-summary-en.csv</a></td><td>Canonical TD1 template; byte-identical to runnable kit</td></tr>
+<tr><td><a href="templates/model-question-comparison-en.csv">templates/model-question-comparison-en.csv</a></td><td>Canonical TD1 template; byte-identical to runnable kit</td></tr>
+<tr><td><a href="templates/routing-rule-en.html">templates/routing-rule-en.html</a></td><td>Blank routing-rule worksheet; rendered as standalone HTML</td></tr>
+<tr><td><a href="templates/routing-rule-en.md">templates/routing-rule-en.md</a></td><td>Blank routing-rule worksheet</td></tr>
+<tr><td><a href="templates/voting-tests-en.csv">templates/voting-tests-en.csv</a></td><td>Blank hand-in worksheet; no prefilled answers</td></tr>
+</tbody>
+</table></div>
+<ul>
+<li><a href="manifest.json">Student manifest</a></li>
+<li><a href="resource-index-en.md">This index as Markdown</a></li>
+<li><a href="resource-index-en.html">This index as HTML</a></li>
+<li><a href="kit-td1/manifest.json">Runnable-kit manifest</a></li>
+</ul></main><footer>Didier Parisot · ESILV · Pack 2026-11-18-students-5.</footer><script>
+(()=>{'use strict';const header=document.querySelector('header'),button=document.getElementById('header-toggle');
+const key='esilv-beta-header:'+location.pathname;let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+function setHeader(collapsed){header.classList.toggle('collapsed',collapsed);button.setAttribute('aria-expanded',String(!collapsed));button.textContent=collapsed?'Expand header':'Collapse header';document.documentElement.style.scrollPaddingTop=(header.offsetHeight+12)+'px';}
+setHeader(saved===null?matchMedia('(max-width:700px)').matches:saved==='collapsed');button.addEventListener('click',()=>{const c=!header.classList.contains('collapsed');setHeader(c);try{localStorage.setItem(key,c?'collapsed':'expanded')}catch(e){}});
+addEventListener('resize',()=>setHeader(header.classList.contains('collapsed')));
+document.querySelectorAll('input[data-check]').forEach(box=>{const k='esilv-beta-review-1:'+location.pathname+':'+box.dataset.check;try{box.checked=localStorage.getItem(k)==='1'}catch(e){}box.addEventListener('change',()=>{try{localStorage.setItem(k,box.checked?'1':'0')}catch(e){}})});
+})();
+</script></body></html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>TD 2 - The quorum, then the routing rule | ESILV</title><style>
+:root{--ink:#18283d;--blue:#165c79;--line:#cbd7df;--bg:#eef3f6;--paper:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:62px}body{margin:0;color:var(--ink);background:var(--bg);font:17px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#075e83;overflow-wrap:anywhere}header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:2px solid var(--blue)}
+.bar{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 16px;flex-wrap:wrap}.brand{font-size:.86rem;font-weight:700}
+button{font:inherit;min-height:40px;padding:6px 12px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;color:var(--ink)}
+#header-content{padding:0 16px 12px}nav{display:flex;flex-wrap:wrap;gap:6px}nav a{padding:4px 10px;border:1px solid var(--line);border-radius:5px;text-decoration:none;font-size:.85rem;max-width:100%}
+header.collapsed #header-content,header.collapsed .brand{display:none}header.collapsed .bar{justify-content:flex-end}
+main{max-width:1040px;margin:24px auto 50px;background:var(--paper);padding:32px 44px;border-radius:10px}
+h1{font-size:2rem;line-height:1.15;color:var(--blue)}h2{font-size:1.38rem;color:var(--blue);margin:34px 0 12px;border-top:1px solid var(--line);padding-top:16px}h3{font-size:1.12rem}
+section.slide{border-bottom:1px solid var(--line);padding:22px 0;display:block;min-height:0}.slide h1{font-size:1.8rem}.chapitre-tag,.meta,.sub{color:#45566b}.card{border:1px solid var(--line);padding:12px;margin:8px 0;border-radius:6px}.cards,.grid-2,.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px}
+.notice{border-left:5px solid #ba7419;background:#fff4dc;padding:12px 16px;margin:0 0 24px;font-size:.96rem}.notice p{margin:4px 0}.notice.final{border-left-color:#2d7a4f;background:#eef7f1}.notice.pack{border-left-color:#165c79;background:#f4fafc}p,li{max-width:86ch}
+.tableau{overflow-x:auto;max-width:100%;margin:16px 0}table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#e7eff3}pre{overflow-x:auto;padding:16px;background:#edf2f7;border-radius:6px;font-size:.86rem}code{font-family:ui-monospace,monospace;font-size:.91em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}summary{min-height:40px;cursor:pointer;padding:8px 0;font-weight:600}
+blockquote{margin:12px 0;padding:8px 16px;border-left:3px solid var(--line)}.toc{padding:16px;background:#f2f6f8}.toc ul{columns:2;column-gap:32px}.toc li{break-inside:avoid;margin:3px 0}.check{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid #e4eaf0;padding:10px 0}.check input{width:22px;height:22px;flex:none;margin:4px 0}.check label{cursor:pointer}.unit{break-inside:avoid}.evidence{font-size:.9rem;color:#46586d}.pill{display:inline-block;background:#e6f1f4;padding:3px 8px;border-radius:4px;font-size:.83rem}.steps{list-style:none;padding:0;margin:18px 0;counter-reset:pas}.steps>li{counter-increment:pas;display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:10px 0;background:#fbfdfe;break-inside:avoid}.steps>li::before{content:counter(pas);flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:1.05rem;display:flex;align-items:center;justify-content:center}.steps .body{flex:1 1 auto;min-width:0}.steps .what{font-weight:700;font-size:1.02rem}.steps .what svg{vertical-align:-4px;margin-right:8px}.steps .how{margin:5px 0 0}.steps .ok{margin:7px 0 0;font-size:.93rem;border-left:4px solid #2d7a4f;background:#eef7f1;padding:6px 10px;border-radius:0 5px 5px 0}.steps .ko{margin:5px 0 0;font-size:.93rem;border-left:4px solid #ba7419;background:#fff4dc;padding:6px 10px;border-radius:0 5px 5px 0}.steps .time{display:inline-block;background:#e6f1f4;padding:2px 8px;border-radius:4px;font-size:.82rem;font-weight:600}.gate{border:2px solid var(--blue);border-radius:8px;padding:14px 18px;margin:22px 0;background:#f4fafc}.gate p{margin:5px 0}.gate .flag{font-weight:700;color:var(--blue)}@media(max-width:700px){.steps>li{gap:11px;padding:12px}.steps>li::before{flex-basis:32px;width:32px;height:32px;font-size:.95rem}}@media print{.steps>li{background:#fff}.gate{background:#fff}}footer{max-width:1040px;margin:auto;padding:0 24px 28px;font-size:.85rem;color:#495d70}
+@media(max-width:700px){body{font-size:16px}main{margin:10px 6px;padding:20px 15px}h1{font-size:1.6rem}.toc ul{columns:1}.bar{padding:3px 10px}#header-content{padding:0 10px 10px}}
+@media print{header,.toc,.self-check-help,footer{display:none}body{background:white;font-size:10pt;line-height:1.35}main{padding:0;margin:0;border-radius:0;max-width:none}h1{font-size:20pt}h2{font-size:14pt;break-after:avoid;margin-top:18pt}h3{font-size:12pt;break-after:avoid}thead{display:table-header-group;break-after:avoid}p,li,tr,.check{break-inside:avoid}.tableau{overflow:visible}table{font-size:8.3pt}th,td{padding:5pt}pre{white-space:pre-wrap;overflow:visible}a{color:inherit;text-decoration:none}.notice{border:1pt solid #aaa;background:#fff}.unit{break-inside:auto}.check input{display:none}footer{font-size:8pt;padding:12pt 0}section.slide{break-before:page}.slide:first-of-type{break-before:auto}@page{size:A4;margin:17mm;@bottom-right{content:counter(page);font-size:8pt;color:#526477}}}
+
+.llm-note{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media print{.llm-note{display:none!important}}
+
+a.download{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;background:#165c79;color:#fff;border-radius:5px;font-weight:700;text-decoration:none}
+</style><link rel="alternate" type="text/plain" title="Site map for AI assistants" href="../../llms.txt"><link rel="alternate" type="text/markdown" title="Full student content in one file" href="../../llms-full.md"></head>
+<body><header><div class="bar"><span class="brand">ESILV · Trustworthy Generative AI · 2026-11-18-students-5</span><button id="header-toggle" aria-expanded="true" aria-controls="header-content">Collapse header</button></div><div id="header-content"><nav aria-label="Resource navigation"><a href="../../index.html">Home</a><a href="../before-td1-en.html">Before TD 1</a><a href="../start-here-en.html">Resources</a><a href="../assessment-en.html">Assessment</a><a href="../submission-en.html">Hand-in</a><a href="../reference-values-td1-en.html">TD 1 reference values</a><a href="../resource-index-en.html">Files</a></nav></div></header>
+<main><p class="llm-note" aria-hidden="true">Machine-readable versions of this site: site map with full URLs and direct section links, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms.txt; full student content in one file, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms-full.md.</p><h1 id="section-1">TD 2 - The quorum, then the routing rule</h1><aside class="notice final"><p><strong>Final · 2026-11-18-students-5, 18 November 2026</strong></p><p>Final version for TD 1 and its preparation. This resource is stable until the session.</p></aside><details class="toc"><summary>Contents (11 sections)</summary><ul><li><a href="#section-2">What you can do by the end of the session</a></li><li><a href="#section-3">Working as an autonomous team</a></li><li><a href="#section-4">Material provided</a></li><li><a href="#section-5">Schedule</a></li><li><a href="#section-6">Step 1 - The k-of-n vote (Pair A)</a></li><li><a href="#section-7">Step 2 - The wrong consensus (Pair B)</a></li><li><a href="#section-10">Step 3 - The routing rule (Pair C)</a></li><li><a href="#section-11">Step 4 - Plenary (17:15 to 17:30)</a></li><li><a href="#section-12">What is expected (the evaluated artefacts)</a></li><li><a href="#section-13">Hand-in and session report</a></li><li><a href="#section-14">What is valued</a></li></ul></details>
+<blockquote><p>Final. Pack 2026-11-18-students-5. Set your machine up with <a href="../before-td1-en.html">Before TD 1</a>.</p></blockquote>
+<p><strong>Module: Trustworthy generative AI. Session 2 (18 November), 13:30 to 18:00.</strong></p>
+<p>In TD 1, you measured five models separately and placed each one in the portfolio. Your TD 1 outputs (<code>traces-td1.csv</code>, <code>reference-td1.csv</code> and your summary tables) are the raw material for this session: we do not re-open TD 1 and no new batch of network calls is launched. This session builds the two decisions of a service: having several models vote when the answer carries consequences, and assigning each question to the cheapest model that remains up to it. By 18:00, your vote runs on the twenty questions (comparing the 2-of-3 panel and the 3-of-5 quorum on your traces), you have explained and isolated a wrong-consensus case in SQL, and your routing rule is written and exercised on a simulator.</p>
+<h2 id="section-2">What you can do by the end of the session</h2>
+<ul>
+<li>Implement a k-of-n vote on a panel of distinct families, with a strict majority, which keeps a value or abstains without manufacturing an answer, and measure the difference between a 2-of-3 quorum and a 3-of-5 quorum on your own traces.</li>
+<li>Identify a wrong consensus in traces, isolate the faulty SQL clause and write a diagnostic query on <code>data/boutique.sqlite</code> that extracts the exact rows responsible for the gap with the reference.</li>
+<li>Write a routing rule per question family, locked to the exact accuracy rates observed in TD 1, which provides for the quorum, the deferral and the abstention.</li>
+<li>Read the decisions of a resource simulator, explain the priority order of its code and adapt its policy to your rule.</li>
+</ul>
+<h2 id="section-3">Working as an autonomous team</h2>
+<p>We evaluate your engineering comprehension and critical judgement, never an AI's raw output. Everything needed to succeed in this session is in your head (understanding what your code and queries actually do), in your TD 1 repository (<code>traces-td1.csv</code>, <code>reference-td1.csv</code>), in the Lecture 2 slides (<code>cm2-en.html</code>) and in this assignment.</p>
+<p>Autonomous problem-solving within your sub-group (six to eight members) is valued:</p>
+<ol>
+<li><strong>Three steps run in parallel (13:45 to 16:45, break included)</strong>: the sub-group splits into three pairs, or into groups of three beyond six members, and each pair owns one step:</li>
+<li><strong>Pair A (Step 1)</strong>: implements <code>vote_k_sur_n</code>, runs the four synthetic examples, then builds the twenty-question comparison table between the fixed 2-of-3 panel and the 3-of-5 quorum across all five TD 1 models.</li>
+<li><strong>Pair B (Step 2)</strong>: inspects the 100 cells of <code>traces-td1.csv</code> to spot shared wrong values across the five TD 1 models, isolates the faulty SQL clause and runs the delta diagnostic query on <code>data/boutique.sqlite</code>. It counts the quorum votes by hand, then checks them with Pair A's method as soon as it is delivered.</li>
+<li><strong>Pair C (Step 3)</strong>: computes the exact TD 1 accuracy rate per question family, writes the one-page routing rule and adapts <code>RESOURCES</code> and <code>choose</code> in <code>atelier-routage.py</code>.</li>
+<li><strong>Mandatory internal cross-review (16:45 to 17:15)</strong>: before finalising <code>reports/td2.md</code>, each pair walks the other members through its code, SQL and routing decisions. At 17:45, the individual Moodle quiz tests the code, SQL and routing logic of all three steps: a member who delegated without understanding will not be able to answer.</li>
+<li><strong>Protocol before calling an instructor</strong>: instructors do not debug code line by line or pre-validate answers during the session. Call an instructor for an infrastructure blocker, after your sub-group has checked (a) the docstring contract in <code>skeleton-multi-llm-en.py</code>, (b) the corresponding Lecture 2 slide, and (c) reproducibility on a second member's machine.</li>
+</ol>
+<h2 id="section-4">Material provided</h2>
+<ul>
+<li>Your stored TD 1 traces (<code>traces-td1.csv</code>, merged between the members), your <code>reference-td1.csv</code> file and your models x questions table with the portfolio sheet.</li>
+<li><code>skeleton-multi-llm-en.py</code>: the <code>Orchestrateur.vote_k_sur_n</code> method is to be completed; the rest of the skeleton does not change.</li>
+<li><code>atelier-vote.py</code>: exercises your vote on four synthetic examples, then on the real traces question by question, with a fixed panel of three families: <code>openai/gpt-oss-120b</code> (Groq), <code>cohere/north-mini-code:free</code> (OpenRouter), <code>qwen/qwen3.8-27b</code> (Groq).</li>
+<li><code>atelier-routage.py</code>: a routing simulator on three fictitious resources and seven scenarios, without any call to a provider.</li>
+<li><a href="portefeuille-modeles-en.html">portefeuille-modeles-en</a> and its CSV, for the prices and the access routes.</li>
+</ul>
+<h2 id="section-5">Schedule</h2>
+<div class="tableau"><table>
+<thead>
+<tr><th>Time</th><th>Step</th><th>Expected output</th></tr>
+</thead>
+<tbody>
+<tr><td>13:30 to 13:45</td><td>Roles of the three pairs, state of the TD 1 traces</td><td>merged traces, A / B / C split</td></tr>
+<tr><td>13:45 to 15:45</td><td><strong>Steps 1, 2 and 3 in parallel</strong>: Pair A k-of-n vote, Pair B wrong consensus, Pair C routing rule</td><td>method and first votes; candidate case; rates per family</td></tr>
+<tr><td>15:45 to 16:00</td><td>Break</td><td></td></tr>
+<tr><td>16:00 to 16:45</td><td><strong>Steps 1, 2 and 3, continued</strong>: twenty-decision table, delta diagnostic query, adapted simulator</td><td>the three step deliverables</td></tr>
+<tr><td>16:45 to 17:15</td><td>Internal sub-group cross-review and assembly of <code>reports/td2.md</code></td><td>all members master Steps 1, 2 and 3</td></tr>
+<tr><td>17:15 to 17:30</td><td><strong>Step 4</strong>: plenary</td><td>collective finding</td></tr>
+<tr><td>17:30 to 17:45</td><td>Marking of the session</td><td>Q1, Q2 and Q3</td></tr>
+<tr><td>17:45 to 18:00</td><td>Individual quiz on Moodle</td><td>quiz mark</td></tr>
+</tbody>
+</table></div>
+<h2 id="section-6">Step 1 - The k-of-n vote (Pair A)</h2>
+<p>Complete <code>Orchestrateur.vote_k_sur_n(self, traces_question, k)</code> in <code>skeleton-multi-llm-en.py</code>. Each element of <code>traces_question</code> carries <code>provider</code>, <code>model_requested</code>, <code>value</code> (an integer in cents, or <code>None</code>) and <code>verdict</code> (<code>executed</code> or <code>error</code>). The contract:</p>
+<ol>
+<li>only the executed proposals with a value vote; an error or an unavailability stays in n without a vote;</li>
+<li>k is a strict majority: <code>n // 2 &lt; k &lt;= n</code>, otherwise the method refuses with <code>ValueError</code>;</li>
+<li>two proposals from the same provider and model pair are refused with <code>ValueError</code>: a duplicate is not a second vote;</li>
+<li>if a value reaches k votes, the method returns <code>{"consensus": True, "value": v, "votes": nombre, "models": [...]}</code>;</li>
+<li>otherwise it returns <code>{"consensus": False, "value": None, "votes": plus grand nombre de voix, "models": []}</code>. It never invents a value.</li>
+</ol>
+<p>Exercise the vote:</p>
+<pre><code>python3 atelier-vote.py                                   # four synthetic examples, no network
+python3 atelier-vote.py --traces traces-td1.csv --case C02 # the real traces of one question</code></pre>
+<p>The second call takes, for each member of the fixed three-model panel, its last attempt on the question, decides, then compares the value kept with your reference. The comparison comes after the decision: the vote does not know the reference.</p>
+<p><strong>Comparing 2-of-3 against 3-of-5 on your TD 1 traces</strong>: Run the evaluation across all twenty questions (<code>C01</code> to <code>C20</code>) and build a comparison table in <code>reports/td2.md</code> showing side by side, for every question:</p>
+<ol>
+<li>the decision of the <strong>fixed 2-of-3 panel</strong> (<code>openai/gpt-oss-120b</code>, <code>cohere/north-mini-code:free</code>, <code>qwen/qwen3.8-27b</code>, threshold <code>k = 2</code>);</li>
+<li>the decision of a <strong>3-of-5 quorum</strong> across all five models of your <code>traces-td1.csv</code> (threshold <code>k = 3</code>, computed by your <code>vote_k_sur_n</code> method);</li>
+<li>agreement with your reference value (<code>reference-td1.csv</code>) and an explicit explanation for every question where moving from 2-of-3 to 3-of-5 changes the decision (for instance turning an abstention into a consensus, or shifting the vote margin because of an HTTP 429 or an invalid SQL statement), citing the exact values and verdicts from your traces.</li>
+</ol>
+<p>Use only your stored TD 1 traces: no new network batch is needed.</p>
+<p><strong>Deliverable of the step</strong>: the completed method, and the commented twenty-question comparison table (2-of-3 versus 3-of-5).</p>
+<h2 id="section-7">Step 2 - The wrong consensus (Pair B)</h2>
+<p>Search all your TD 1 traces (across <strong>all five models</strong> queried in TD 1, not only the three models of the fixed panel) for an identified case where at least two models return the <strong>same wrong value</strong> (<code>verdict = incorrect</code> with identical <code>value</code>). Declare the panel and threshold k out of n, then show whether that shared wrong value wins the fixed 2-of-3 panel, whether it wins the 3-of-5 quorum, or whether it is outvoted. Reminder: <code>dots-studio/dots-3-note-preview:free</code> and <code>openai/gpt-oss-20b</code> belong to the five TD 1 models, but Dots and 20B are not members of the fixed three-model panel of <code>atelier-vote.py</code>.</p>
+<p>Your analysis in <code>reports/td2.md</code> is carried out on an SQL case executed on <code>data/boutique.sqlite</code>:</p>
+<ul>
+<li>either a shared wrong value found in your own <code>traces-td1.csv</code>;</li>
+<li>or, if your 100 TD 1 cells contain no shared wrong value between any two models, the <strong>historical case <code>DEMO-SQL-C11</code></strong> below. Its absence from your batch does not cap the mark.</li>
+</ul>
+<p>The <code>DEMO-VOTE</code> example below illustrates the mechanism on a one-row toy table; it explains the date boundary and is not an analysis case.</p>
+<p>In either case, provide these three pieces of evidence:</p>
+<ol>
+<li><strong>Identification and quorum verdict</strong>: question identifier, models agreeing on the wrong value, shared wrong value, independent reference value from your <code>reference-td1.csv</code>, and what the 2-of-3 and 3-of-5 quorums return.</li>
+<li><strong>Faulty SQL clause diagnosis</strong>: the two complete SQL queries and the exact explanation of the <code>WHERE</code> or <code>JOIN</code> condition that produces the wrong value.</li>
+<li><strong>Delta diagnostic SQL query on <code>data/boutique.sqlite</code></strong>: write and execute a <code>SELECT</code> query on <code>data/boutique.sqlite</code> that lists the exact <code>customer_id</code> rows (and their order revenue excluding VAT) counted by your reference query but missed (or wrongly added) by the faulty queries, accounting for the exact difference in cents between the wrong value and your reference.</li>
+</ol>
+<h3 id="section-8">Mechanism illustrated: DEMO-VOTE</h3>
+<p>The workshop's <code>wrong consensus</code> example has proposals <code>[0, 0, 100]</code>, reference 100 cents and threshold 2 of 3. To explain a possible shared SQL cause, use this invented sale: date <code>2026-01-01</code>, amount 100 cents. The requested period is 1 January inclusive to 2 January exclusive. Two proposals use <code>sale_date &gt; '2026-01-01'</code>; the third uses <code>sale_date &gt;= '2026-01-01'</code>. All use <code>sale_date &lt; '2026-01-02'</code> and <code>COALESCE(SUM(amount_cents), 0)</code>. Execute both variants on this one-row toy table, explain the boundary and compare the quorum with the independent reference. These values and queries are constructed teaching material, not model outputs or answers on the shop database.</p>
+<h3 id="section-9">Historical shop-database case: DEMO-SQL-C11</h3>
+<p>On question <code>C11</code> (<em>total revenue excluding VAT, in euro cents, generated by customers who are exactly 25 years old on the reference date <code>2026-12-01</code>, over all their orders</em>), two distinct TD 1 models, <code>openai/gpt-oss-20b</code> (Groq) and <code>cohere/north-mini-code:free</code> (OpenRouter), returned two different SQLite queries during the September 2026 pilot batch. Both run without error on <code>data/boutique.sqlite</code> and agree on the same wrong value <code>0</code>. Queries reproduced as returned by the models:</p>
+<pre><code>-- Query M1, openai/gpt-oss-20b (returns 0 on data/boutique.sqlite)
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN product p ON o.product_id = p.product_id
+WHERE c.birth_date = '2001-12-01';
+
+-- Query M2, cohere/north-mini-code:free (returns 0 on data/boutique.sqlite)
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN product p ON o.product_id = p.product_id
+WHERE CAST(strftime('%Y-%m-%d', '2026-12-01') AS TEXT) &gt;= c.birth_date
+  AND CAST(strftime('%Y-%m-%d', '2026-12-01', '+1 year') AS TEXT) &lt;= c.birth_date;</code></pre>
+<p>If your TD 1 batch has no shared wrong value (or alongside your own case), run <code>M1</code> and <code>M2</code> on <code>data/boutique.sqlite</code>, compare their shared output (<code>0</code>) with your reference value for <code>C11</code> in <code>reference-td1.csv</code>, and explain which birth-date window each <code>WHERE</code> condition actually tests, against the window required by "exactly 25 years old on <code>2026-12-01</code>". Then write the diagnostic SQL query on <code>data/boutique.sqlite</code> that lists the customers aged 25 on <code>2026-12-01</code> and the revenue of their orders: the sum of these amounts must match your reference, which accounts for the entire gap with <code>0</code>.</p>
+<p><strong>Deliverable</strong>: one explained case with its identifier, source/nature, agreeing models, reference, declared 2-of-3 and 3-of-5 quorum results, SQL root cause, executed delta query on <code>data/boutique.sqlite</code> and independent checking method.</p>
+<h2 id="section-10">Step 3 - The routing rule (Pair C)</h2>
+<p>Write, on one page, the rule of the sub-group. For each question family (<code>F1</code> period, <code>F2</code> completed age at a date, <code>F2b</code> age at the order, <code>F3</code> product list, and combinations):</p>
+<ul>
+<li><strong>the exact TD 1 rate</strong>: cite the cells of your TD 1 table (<code>C01</code> to <code>C20</code>) belonging to the family and the <code>correct / cases</code> ratio observed for your models on that family;</li>
+<li><strong>the first model called</strong>: the cheapest one, according to the portfolio, among those that your TD 1 table shows to be correct on the family;</li>
+<li><strong>the checking</strong>: none, 2-of-3 quorum, 3-of-5 quorum, reference, review, according to what an error costs for three uses (internal dashboard, figure shown to the customer, amount paid out). <strong>Consistency constraint</strong>: calling a single free model with no check (<code>none</code>) is only admissible for a low-stakes internal dashboard AND on a family where that model achieved 100 % accuracy in your TD 1 table; whenever a model made at least one error on the family in TD 1, or whenever the figure is shown to a customer or governs a payout, the rule must require a quorum or a deterministic check;</li>
+<li><strong>the course of action if the first model is unavailable</strong>: next model, waiting for the refill when the request can wait, abstention.</li>
+</ul>
+<p>Keep simple period and product questions: they help compare routing choices. Twenty questions support a batch-specific hypothesis, not a general error rate, a permanent ranking or a quorum error guarantee.</p>
+<p>Then launch the simulator:</p>
+<pre><code>python3 atelier-routage.py                       # the seven scenarios
+python3 atelier-routage.py --scenario deferrable # one scenario</code></pre>
+<p>Read each decision (<code>run</code>, <code>defer</code>, <code>abstain</code>), its resource and its reason. Then adapt <code>RESOURCES</code> and <code>choose</code> to your rule: replace or extend the resources with your portfolio models, their eligibility level derived from TD 1 and their price, and include the justifying TD 1 cells in the <code>"reason"</code> string of every decision. Finally, explain in <code>reports/td2.md</code> why, in the supplied <code>choose</code> function, an immediately available subscription resource (<code>cash == 0</code>, <code>allocation &gt; 0</code>) is selected before deferring (<code>defer</code>) to wait for an exhausted free resource (<code>cash == 0</code>, <code>allocation == 0</code>) whose refill occurs before <code>deadline_minutes</code>, and under what operational condition that priority should be reversed.</p>
+<p><strong>Deliverable of the step</strong>: the one-page rule, the simulator outputs before and after adaptation, and the analysis of the priority order in <code>choose</code>.</p>
+<h2 id="section-11">Step 4 - Plenary (17:15 to 17:30)</h2>
+<p>After your internal sub-group cross-review (16:45 to 17:15), each sub-group presents its wrong consensus and its rule. Compare the rules: the same database, the same traces, rules that differ by the checking retained and by the cost accepted. Note the questions for which no free model is enough on its own: they set the price of checking in TD 3.</p>
+<p>The instructor then marks the session at each table: Q1, Q2 and Q3, each 0, 1 or 2, as set out on the Assessment page. The individual quiz on Moodle takes the last fifteen minutes, from 17:45 to 18:00.</p>
+<h2 id="section-12">What is expected (the evaluated artefacts)</h2>
+<ol>
+<li><code>skeleton-multi-llm-en.py</code> with <code>vote_k_sur_n</code> completed.</li>
+<li>The twenty-question comparison table of the vote (2-of-3 panel versus 3-of-5 quorum on your TD 1 traces): consensus or abstention, value, votes, agreement with the reference, and commentary on every difference between 2-of-3 and 3-of-5.</li>
+<li>At least one commented wrong consensus verified on <code>data/boutique.sqlite</code> (from your TD 1 batch or from <code>DEMO-SQL-C11</code> if your batch has none): question, value, models, SQL root cause, executed delta SQL query and consequence for checking.</li>
+<li>The one-page routing rule, with the TD 1 accuracy rates and cells that justify each family.</li>
+<li>The simulator outputs, before and after adaptation, and the analysis of the priority between available included capacity and deferral of a free route.</li>
+<li>The prompts, as used, if they have changed since TD 1.</li>
+</ol>
+<h2 id="section-13">Hand-in and session report</h2>
+<p>At the end of TD 2, add <code>reports/td2.md</code> to your sub-group's public Git repository, shared from TD 1 to TD 3. Describe the work attempted and completed, successes and failures with links to the results and traces, observed causes and hypotheses, limitations, each member's contribution (Pairs A, B, C) and next steps. Identify replayed or synthetic examples explicitly.</p>
+<p>Commit the report with the code, prompts and evidence. Update your entry in the same Moodle hand-in area with the full repository URL, the session's full commit hash and a link to the report at that commit. Retain earlier TD entries and reports. Check that the repository opens without signing in. Hand in by 23:59 Paris time on Sunday 22 November 2026. No video.</p>
+<h2 id="section-14">What is valued</h2>
+<ul>
+<li><strong>A vote that abstains</strong> when no value reaches k, keeps an unavailable member in n, and compares 2-of-3 against 3-of-5 across the twenty questions.</li>
+<li><strong>A wrong consensus proven in SQL</strong> on <code>data/boutique.sqlite</code>, with the delta query isolating the exact rows that differ from the reference.</li>
+<li><strong>A rule justified by the traces</strong>: each choice of model refers back to TD 1 rates and cells, each check to a cost of error.</li>
+<li><strong>A traceable reason</strong> in each decision of the simulator and an exact reading of the branches of <code>choose</code>.</li>
+</ul></main><footer>Didier Parisot · ESILV · Pack 2026-11-18-students-5.</footer><script>
+(()=>{'use strict';const header=document.querySelector('header'),button=document.getElementById('header-toggle');
+const key='esilv-beta-header:'+location.pathname;let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+function setHeader(collapsed){header.classList.toggle('collapsed',collapsed);button.setAttribute('aria-expanded',String(!collapsed));button.textContent=collapsed?'Expand header':'Collapse header';document.documentElement.style.scrollPaddingTop=(header.offsetHeight+12)+'px';}
+setHeader(saved===null?matchMedia('(max-width:700px)').matches:saved==='collapsed');button.addEventListener('click',()=>{const c=!header.classList.contains('collapsed');setHeader(c);try{localStorage.setItem(key,c?'collapsed':'expanded')}catch(e){}});
+addEventListener('resize',()=>setHeader(header.classList.contains('collapsed')));
+document.querySelectorAll('input[data-check]').forEach(box=>{const k='esilv-beta-review-1:'+location.pathname+':'+box.dataset.check;try{box.checked=localStorage.getItem(k)==='1'}catch(e){}box.addEventListener('change',()=>{try{localStorage.setItem(k,box.checked?'1':'0')}catch(e){}})});
+})();
+</script></body></html>

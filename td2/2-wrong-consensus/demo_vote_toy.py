@@ -4,7 +4,7 @@ sale on 2026-01-01, 100 cents; requested period [2026-01-01, 2026-01-02).
 Runs both boundary variants on an in-memory one-row toy table, then the 2-of-3
 vote on the three proposals. Constructed teaching material, nature = simulation.
 
-    python3 td2/demo_vote_toy.py
+    python3 td2/2-wrong-consensus/demo_vote_toy.py
 """
 import importlib.util
 import json
@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 from types import SimpleNamespace
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location("skeleton", ROOT / "skeleton-multi-llm-en.py")
 skeleton = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = skeleton

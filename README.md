@@ -15,7 +15,7 @@ This is the repository of one sub-group for the three lab sessions of the module
 
 - **Single models:** gpt-oss-120b 20/20; gpt-oss-20b 17/20; Qwen3.8-27B 16/20, with one cell unfinished after two HTTP 429; north-mini-code 14/20; dots-3-note 13/20. Every failure involves an age filter.
 - **Votes:** the 2-of-3 vote makes 18 correct decisions and abstains twice, with no wrong consensus. The 3-of-5 vote makes 16 correct decisions and abstains four times.
-- **Wrong agreement:** in this batch, Qwen and Dots agree on the same wrong value for C10. The cause is the same incomplete age formula in both. A boundary fixture detects it.
+- **Wrong agreement:** in this batch, Qwen and Dots agree on the same wrong value for C10 (119410 against 558980). The cause is the same incomplete age formula in both. A delta SQL query isolates the four customers (439570 cents) they miss, and a boundary fixture detects it.
 - **Recommendation:** for a figure shown to a customer, route period and product questions to gpt-oss-20b and send any age question to a 2-of-3 quorum, with abstention to a human.
 
 ## Where things are
@@ -28,9 +28,10 @@ This is the repository of one sub-group for the three lab sessions of the module
 | Five-model sheet | `td1/five-model-summary-en.csv` |
 | Prompts, verbatim | `td1/prompts-en.md` |
 | Access check, plans | `evidence/check-access-2026-10-21.txt`, `evidence/plans.md` |
-| Vote (TD 2) | `Orchestrateur.vote_k_sur_n` in `skeleton-multi-llm-en.py`; tests in `td2/voting-tests.csv`; decisions in `td2/vote-decisions.csv` (2-of-3) and `td2/vote-decisions-3of5.csv` |
-| Wrong consensus | `td2/wrong-consensus.md` (real case C10 and synthetic DEMO-VOTE) |
-| Routing rule and simulator | `td2/routing-rule.md`, `td2/routing-simulator-before.jsonl`, `td2/routing-simulator-after.jsonl` |
+| TD 2 index | `td2/README.md` (one folder per step: `1-vote/`, `2-wrong-consensus/`, `3-routing/`) |
+| Vote (TD 2) | `Orchestrateur.vote_k_sur_n` in `skeleton-multi-llm-en.py`; tests in `td2/1-vote/voting-tests.csv`; 2-of-3 vs 3-of-5 on the twenty questions in `td2/1-vote/vote-comparison-2of3-vs-3of5.csv` (`td2/1-vote/compare_quorums.py`) |
+| Wrong consensus | `td2/2-wrong-consensus/wrong-consensus.md` (real case C10, synthetic DEMO-VOTE, historical DEMO-SQL-C11); delta SQL queries `td2/2-wrong-consensus/sql/`, run by `td2/2-wrong-consensus/delta_diagnostic.py` |
+| Routing rule and simulator | `td2/3-routing/routing-rule.md`, `td2/3-routing/family-rates.csv`, `td2/3-routing/routing-simulator-before.jsonl`, `td2/3-routing/routing-simulator-after.jsonl`, `td2/3-routing/choose-priority-demo.jsonl` |
 | Costs and decision (TD 3) | `td3/cost-calculation.csv`, `td3/configuration-comparison.csv`, `td3/decision.md` |
 | Three slides | `slides/slides.html` (open in a browser, arrow keys) |
 | Demo for the video | `demo/demo-one-question.sh` |
@@ -42,21 +43,25 @@ This is the repository of one sub-group for the three lab sessions of the module
 No key is needed except for the two commands marked "network".
 
 ```bash
-python3 verify-data.py                       # data integrity, last object "ok": true
-python3 check_access.py --no-network         # Python and database checks
-python3 reference/build_reference.py         # twenty references from the read-only base
-python3 reference/independent_check.py       # recompute them in Python from the CSV files: 20/20 agree
-python3 td1/build_summaries.py               # merge traces, comparison CSV, pivot, family counts
+python3 verify-data.py                                  # data integrity, last object "ok": true
+python3 check_access.py --no-network                    # Python and database checks
+python3 reference/build_reference.py                    # twenty references from the read-only base
+python3 reference/independent_check.py                  # recompute them in Python from the CSV files: 20/20 agree
+python3 td1/build_summaries.py                          # merge traces, comparison CSV, pivot, family counts
 python3 skeleton-multi-llm-en.py --rates --state traces-td1.jsonl
-python3 atelier-vote.py                      # four synthetic examples
-python3 td2/vote_tests.py                    # vote contract tests, 12/12
-python3 td2/vote_all.py                      # 2-of-3 on the twenty questions
-python3 td2/wrong_consensus_check.py         # C10 and the boundary fixture
-python3 td2/demo_vote_toy.py                 # synthetic DEMO-VOTE
-python3 atelier-routage.py                   # simulator, supplied rule
-python3 td2/routage-adapte.py                # simulator, our rule
-python3 td3/configurations.py                # cost worksheet, configuration table, 3-of-5 decisions
-bash demo/demo-one-question.sh --replay      # demo without network (nature replay)
+python3 atelier-vote.py                                 # four synthetic examples
+python3 td2/1-vote/vote_tests.py                        # vote contract tests, 12/12
+python3 td2/1-vote/vote_all.py                          # 2-of-3 on the twenty questions
+python3 td2/1-vote/compare_quorums.py                   # 2-of-3 vs 3-of-5 on the twenty questions
+python3 td2/2-wrong-consensus/wrong_consensus_check.py  # C10 and the boundary fixture
+python3 td2/2-wrong-consensus/demo_vote_toy.py          # synthetic DEMO-VOTE
+python3 td2/2-wrong-consensus/delta_diagnostic.py       # delta SQL queries C10 and DEMO-SQL-C11
+python3 td2/3-routing/family_rates.py                   # TD 1 rates per family
+python3 atelier-routage.py                              # simulator, supplied rule
+python3 td2/3-routing/routage-adapte.py                 # simulator, our rule
+python3 td2/3-routing/choose_priority_demo.py           # priority order of the supplied choose
+python3 td3/configurations.py                           # cost worksheet, configuration table, 3-of-5 decisions
+bash demo/demo-one-question.sh --replay                 # demo without network (nature replay)
 ```
 
 The two network commands need keys:

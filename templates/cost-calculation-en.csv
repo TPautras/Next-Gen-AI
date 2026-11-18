@@ -1,0 +1,1 @@
+configuration,case_id,attempt_id,model_id,provider,nature,input_tokens,output_tokens,native_cost_usd_ex_tax,paid_comparator,input_usd_ex_tax_per_million,output_usd_ex_tax_per_million,price_date,price_source_url,calculated_api_equivalent_usd_ex_tax,evidence,missing_fields
