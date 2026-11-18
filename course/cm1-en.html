@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Lecture 1 | ESILV</title><style>
+:root{--ink:#18283d;--blue:#165c79;--line:#cbd7df;--bg:#eef3f6;--paper:#fff}
+*{box-sizing:border-box}html{scroll-padding-top:62px}body{margin:0;color:var(--ink);background:var(--bg);font:17px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:#075e83;overflow-wrap:anywhere}header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:2px solid var(--blue)}
+.bar{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:3px 16px;flex-wrap:wrap}.brand{font-size:.86rem;font-weight:700}
+button{font:inherit;min-height:40px;padding:6px 12px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;color:var(--ink)}
+#header-content{padding:0 16px 12px}nav{display:flex;flex-wrap:wrap;gap:6px}nav a{padding:4px 10px;border:1px solid var(--line);border-radius:5px;text-decoration:none;font-size:.85rem;max-width:100%}
+header.collapsed #header-content,header.collapsed .brand{display:none}header.collapsed .bar{justify-content:flex-end}
+main{max-width:1040px;margin:24px auto 50px;background:var(--paper);padding:32px 44px;border-radius:10px}
+h1{font-size:2rem;line-height:1.15;color:var(--blue)}h2{font-size:1.38rem;color:var(--blue);margin:34px 0 12px;border-top:1px solid var(--line);padding-top:16px}h3{font-size:1.12rem}
+section.slide{border-bottom:1px solid var(--line);padding:22px 0;display:block;min-height:0}.slide h1{font-size:1.8rem}.chapitre-tag,.meta,.sub{color:#45566b}.card{border:1px solid var(--line);padding:12px;margin:8px 0;border-radius:6px}.cards,.grid-2,.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px}
+.notice{border-left:5px solid #ba7419;background:#fff4dc;padding:12px 16px;margin:0 0 24px;font-size:.96rem}.notice p{margin:4px 0}.notice.final{border-left-color:#2d7a4f;background:#eef7f1}.notice.pack{border-left-color:#165c79;background:#f4fafc}p,li{max-width:86ch}
+.tableau{overflow-x:auto;max-width:100%;margin:16px 0}table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#e7eff3}pre{overflow-x:auto;padding:16px;background:#edf2f7;border-radius:6px;font-size:.86rem}code{font-family:ui-monospace,monospace;font-size:.91em;overflow-wrap:anywhere}pre code{overflow-wrap:normal}summary{min-height:40px;cursor:pointer;padding:8px 0;font-weight:600}
+blockquote{margin:12px 0;padding:8px 16px;border-left:3px solid var(--line)}.toc{padding:16px;background:#f2f6f8}.toc ul{columns:2;column-gap:32px}.toc li{break-inside:avoid;margin:3px 0}.check{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid #e4eaf0;padding:10px 0}.check input{width:22px;height:22px;flex:none;margin:4px 0}.check label{cursor:pointer}.unit{break-inside:avoid}.evidence{font-size:.9rem;color:#46586d}.pill{display:inline-block;background:#e6f1f4;padding:3px 8px;border-radius:4px;font-size:.83rem}.steps{list-style:none;padding:0;margin:18px 0;counter-reset:pas}.steps>li{counter-increment:pas;display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:10px 0;background:#fbfdfe;break-inside:avoid}.steps>li::before{content:counter(pas);flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:1.05rem;display:flex;align-items:center;justify-content:center}.steps .body{flex:1 1 auto;min-width:0}.steps .what{font-weight:700;font-size:1.02rem}.steps .what svg{vertical-align:-4px;margin-right:8px}.steps .how{margin:5px 0 0}.steps .ok{margin:7px 0 0;font-size:.93rem;border-left:4px solid #2d7a4f;background:#eef7f1;padding:6px 10px;border-radius:0 5px 5px 0}.steps .ko{margin:5px 0 0;font-size:.93rem;border-left:4px solid #ba7419;background:#fff4dc;padding:6px 10px;border-radius:0 5px 5px 0}.steps .time{display:inline-block;background:#e6f1f4;padding:2px 8px;border-radius:4px;font-size:.82rem;font-weight:600}.gate{border:2px solid var(--blue);border-radius:8px;padding:14px 18px;margin:22px 0;background:#f4fafc}.gate p{margin:5px 0}.gate .flag{font-weight:700;color:var(--blue)}@media(max-width:700px){.steps>li{gap:11px;padding:12px}.steps>li::before{flex-basis:32px;width:32px;height:32px;font-size:.95rem}}@media print{.steps>li{background:#fff}.gate{background:#fff}}footer{max-width:1040px;margin:auto;padding:0 24px 28px;font-size:.85rem;color:#495d70}
+@media(max-width:700px){body{font-size:16px}main{margin:10px 6px;padding:20px 15px}h1{font-size:1.6rem}.toc ul{columns:1}.bar{padding:3px 10px}#header-content{padding:0 10px 10px}}
+@media print{header,.toc,.self-check-help,footer{display:none}body{background:white;font-size:10pt;line-height:1.35}main{padding:0;margin:0;border-radius:0;max-width:none}h1{font-size:20pt}h2{font-size:14pt;break-after:avoid;margin-top:18pt}h3{font-size:12pt;break-after:avoid}thead{display:table-header-group;break-after:avoid}p,li,tr,.check{break-inside:avoid}.tableau{overflow:visible}table{font-size:8.3pt}th,td{padding:5pt}pre{white-space:pre-wrap;overflow:visible}a{color:inherit;text-decoration:none}.notice{border:1pt solid #aaa;background:#fff}.unit{break-inside:auto}.check input{display:none}footer{font-size:8pt;padding:12pt 0}section.slide{break-before:page}.slide:first-of-type{break-before:auto}@page{size:A4;margin:17mm;@bottom-right{content:counter(page);font-size:8pt;color:#526477}}}
+
+.llm-note{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+a.download{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;background:#165c79;color:#fff;border-radius:5px;font-weight:700;text-decoration:none}
+</style><link rel="alternate" type="text/plain" title="Site map for AI assistants" href="../../llms.txt"><link rel="alternate" type="text/markdown" title="Full student content in one file" href="../../llms-full.md"></head>
+<body><header><div class="bar"><span class="brand">ESILV · Trustworthy Generative AI · 2026-10-18-students-1</span><button id="header-toggle" aria-expanded="true" aria-controls="header-content">Collapse header</button></div><div id="header-content"><nav aria-label="Resource navigation"><a href="../../index.html">Home</a><a href="../before-td1-en.html">Before TD 1</a><a href="../start-here-en.html">Resources</a><a href="../assessment-en.html">Assessment</a><a href="../submission-en.html">Hand-in</a><a href="../resource-index-en.html">Files</a></nav></div></header>
+<main><p class="llm-note" aria-hidden="true">Machine-readable versions of this site: site map with full URLs and direct section links, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms.txt; full student content in one file, https://storage.googleapis.com/docs.g.quanticfactory.io/ESILV/next-generation-ai/latest/llms-full.md.</p><h1 id="section-1">Trustworthy generative AI</h1><aside class="notice"><p><strong>Beta · 2026-10-18-students-1, 18 October 2026</strong></p><p>Beta: this resource may still change before its session. The site is updated in place; the pack version above identifies what you read.</p></aside><details class="toc"><summary>Contents (24 sections)</summary><ul><li><a href="#section-2">Two decisions, and the evidence that grounds them</a></li><li><a href="#section-3">A practitioner, complementing your courses</a></li><li><a href="#section-4">Same question, same model, five times</a></li><li><a href="#section-5">Same question, four models</a></li><li><a href="#section-6">A wrong figure looks like a right one</a></li><li><a href="#section-7">Three settings, and a version that moves</a></li><li><a href="#section-8">Latest-generation models rarely get it wrong</a></li><li><a href="#section-9">From the token to the bill</a></li><li><a href="#section-10">Twenty people, ten requests a day</a></li><li><a href="#section-11">Models by the hundred</a></li><li><a href="#section-12">Five capability groups</a></li><li><a href="#section-13">Sixteen index points, a factor of a hundred on the price</a></li><li><a href="#section-14">The same model, three ways to pay for it</a></li><li><a href="#section-15">The resource that is up to the request</a></li><li><a href="#section-16">Routing: the cheapest that remains up to the question</a></li><li><a href="#section-17">Cross-checking: the k-of-n quorum</a></li><li><a href="#section-18">The same assistant, three configurations</a></li><li><a href="#section-19">One shop, three tables, twenty questions</a></li><li><a href="#section-20">Five free models to compare</a></li><li><a href="#section-21">What a trace is</a></li><li><a href="#section-22">Compare, cross-check, quantify</a></li><li><a href="#section-23">Nine outcomes, marked in session</a></li><li><a href="#section-24">TD 1: comparing models on the same questions</a></li><li><a href="#section-25">Sub-groups, roles, environment</a></li></ul></details><p class="pill">Revenue values in this lecture copy are synthetic examples: the reference values of TD 1 are computed in the session.</p>
+<section class="slide cover" data-chap="Opening">
+<div class="chapitre-tag">Next-Generation AI module - Data &amp; AI major - S7</div>
+
+<div class="sub">Choose the model that is up to each question at the lowest cost, and cross-check several models when the answer carries consequences.</div>
+<div class="meta">Lecture 1 of 3, 21 October 2026, 8:30 to 9:45 and 10:00 to 11:30. Lab session from 14:00 to 18:30 in the room.</div>
+</section>
+<section class="slide" data-chap="Opening">
+<div class="chapitre-tag">What you will be able to do in December</div>
+<h2 id="section-2">Two decisions, and the evidence that grounds them</h2>
+<ul>
+<li>For a given request, <strong class="key">choose the cheapest model that remains up to</strong> its difficulty, and write the rule that applies this choice without the user having to make it.</li>
+<li>When the answer carries consequences, <strong class="key">query several models and keep only a majority</strong>, with abstention when no majority exists and independent checking of the result.</li>
+<li>In both cases, <strong class="key">check an answer against a reference</strong> computed without a model, and read the trace that says what happened.</li>
+</ul>
+</section>
+<section class="slide" data-chap="Opening">
+<div class="chapitre-tag">Who is speaking to you</div>
+<h2 id="section-3">A practitioner, complementing your courses</h2>
+<p>I have been designing and operating AI systems in production for years: a multi-model consensus system, a portfolio of models routed according to the task, assistants on company data.</p>
+<p class="lead">This course starts from these systems as they run, with their costs and their trade-offs. The tools change every quarter; the need and the way to meet it do not.</p>
+</section>
+<section class="slide" data-chap="Hallucination">
+<div class="chapitre-tag">The origin of the module</div>
+<h2 id="section-4">Same question, same model, five times</h2>
+<p class="lead">A revenue question, asked five times to the same small model, without giving it the data.</p>
+<div class="cards">
+<div class="card bad"><div class="q">Attempt 1</div><div class="a">12</div></div>
+<div class="card bad"><div class="q">Attempt 2</div><div class="a">12</div></div>
+<div class="card bad"><div class="q">Attempt 3</div><div class="a">15</div></div>
+<div class="card bad"><div class="q">Attempt 4</div><div class="a">“about 12”</div></div>
+<div class="card bad"><div class="q">Attempt 5</div><div class="a">14</div></div>
+</div>
+<p>Five confident answers. None has any basis: the model does not have the data.</p>
+</section>
+<section class="slide" data-chap="Hallucination">
+<div class="chapitre-tag">The origin of the module</div>
+<h2 id="section-5">Same question, four models</h2>
+<div class="cards">
+<div class="card bad"><div class="q">Small model A</div><div class="a">12</div></div>
+<div class="card bad"><div class="q">Small model B</div><div class="a">14</div></div>
+<div class="card ok"><div class="q">Latest-generation model</div><div class="a">“Give me the sales data”</div></div>
+<div class="card bad"><div class="q">Small model C</div><div class="a">18</div></div>
+</div>
+<p>Three models make up a figure. The fourth asks for the data. <strong class="key">The fourth costs a hundred times more</strong> per million tokens.</p>
+</section>
+<section class="slide" data-chap="Hallucination">
+<div class="chapitre-tag">The finding</div>
+<h2 id="section-6">A wrong figure looks like a right one</h2>
+<p>A model output is a <strong class="key">draw</strong>: the model computes a probability for each next word, then draws one. Two draws differ. A wrong answer is written with the same confidence as a right one.</p>
+<p class="lead">A numerical answer needs a check. Execute SQL on the database and independently verify the reference before comparing model answers. This identifies errors on the cases studied.</p>
+</section>
+<section class="slide" data-chap="Hallucination">
+<div class="chapitre-tag">Where the gap comes from</div>
+<h2 id="section-7">Three settings, and a version that moves</h2>
+<ul>
+<li><strong class="key">Temperature</strong> and <strong class="key">top-p</strong> set the share of randomness in the draw. At temperature 0, the model takes the most probable word; two words that are almost tied can still flip from one call to the next.</li>
+<li><strong class="key">The context</strong>: the same question with a written schema, units and conventions produces a different answer from the bare question.</li>
+<li><strong class="key">The version</strong>: the model served under the same name changes without notice. A measurement has a date.</li>
+</ul>
+<div class="callout">The lab session sets the temperature to 0, sends the same prompt to all models and dates each trace: the remaining gaps are attributable to the model.</div>
+</section>
+<section class="slide" data-chap="The price">
+<div class="chapitre-tag">What has changed</div>
+<h2 id="section-8">Latest-generation models rarely get it wrong</h2>
+<p>On a well-posed question, with its data, a latest-generation model returns a correct answer in the vast majority of cases. The error has not disappeared; it has shifted to <strong class="key">the price</strong> of this certainty and to <strong class="key">the rationing</strong> of access to it.</p>
+<div class="tableau"><table class="grid">
+<tr><th>Model</th><th>Public index</th><th>Input</th><th>Output</th></tr>
+<tr><td>Claude Opus 5.5</td><td>57.6</td><td>4</td><td>20</td></tr>
+<tr><td>Claude Fable 5.1</td><td>53.4</td><td>10</td><td>50</td></tr>
+<tr><td>GPT-6 Astra</td><td>52.7</td><td>10</td><td>50</td></tr>
+<tr><td>GPT-6 Luna</td><td>37.3</td><td>0.1</td><td>0.5</td></tr>
+<tr><td>GPT-OSS 120B (paid Groq route)</td><td>11.6</td><td>0.15</td><td>0.60</td></tr>
+</table></div>
+<p>Prices in USD excluding tax per million tokens, OpenRouter catalogue and Groq price list read on 29 September 2026; Intelligence Index (Artificial Analysis) relayed by the OpenRouter rankings page, read on 28 September 2026.</p>
+</section>
+<section class="slide" data-chap="The price">
+<div class="chapitre-tag">What an answer costs</div>
+<h2 id="section-9">From the token to the bill</h2>
+<div class="flow">
+<div class="box">input tokens × input price</div><div class="arrow">+</div>
+<div class="box">output tokens × output price</div><div class="arrow">=</div>
+<div class="box" style="border-color:var(--accent)"><strong>cost of the call</strong></div>
+</div>
+<div class="tableau"><table class="grid">
+<tr><th>Request on a model at 10 / 50 USD excluding tax</th><th>Tokens</th><th>Cost</th></tr>
+<tr><td>A short question with its schema</td><td>2,000 input, 500 output</td><td>0.045 USD excluding tax</td></tr>
+<tr><td>A question with an attached dossier</td><td>200,000 input, 20,000 output</td><td>3 USD excluding tax</td></tr>
+<tr><td>A complex process in a hundred calls</td><td>100 × (20,000 input, 2,000 output)</td><td>30 USD excluding tax</td></tr>
+</table></div>
+</section>
+<section class="slide" data-chap="The price">
+<div class="chapitre-tag">What a team costs</div>
+<h2 id="section-10">Twenty people, ten requests a day</h2>
+<p>20 people × 10 requests × 20 working days × 12 months = <strong class="key">48,000 requests a year</strong>.</p>
+<div class="tableau"><table class="grid">
+<tr><th>Average cost of a request</th><th>Annual bill</th></tr>
+<tr><td>0.03 USD excluding tax (small model, short question)</td><td>1,440 USD excluding tax</td></tr>
+<tr><td>3 USD excluding tax (latest-generation model, attached dossier)</td><td>144,000 USD excluding tax</td></tr>
+<tr><td>30 USD excluding tax (systematic complex process)</td><td>1,440,000 USD excluding tax</td></tr>
+</table></div>
+<div class="callout">At 3 USD excluding tax per request, the annual bill reaches the order of magnitude of the net salary of three to four junior engineers. When AI costs more than the human work it replaces, the human comes back.</div>
+</section>
+<section class="slide" data-chap="The portfolio">
+<div class="chapitre-tag">The portfolio</div>
+<h2 id="section-11">Models by the hundred</h2>
+<div class="cards">
+<div class="card"><div class="q">OpenRouter routes, 29 September 2026</div><div class="a">460</div></div>
+<div class="card"><div class="q">Canonical identifiers</div><div class="a">376</div></div>
+<div class="card"><div class="q">Zero-price routes</div><div class="a">20</div></div>
+<div class="card"><div class="q">Groq models, 25 September 2026</div><div class="a">11</div></div>
+</div>
+<p>A <strong class="key">model</strong> is the system that produces the answer; a <strong class="key">route</strong> is the way to access it at a provider, with its price, its limits and its conditions. The same model often exists on several routes.</p>
+<p class="lead">Anyone can check: <code>curl https://openrouter.ai/api/v1/models</code> returns the public catalogue, without a key.</p>
+</section>
+<section class="slide" data-chap="The portfolio">
+<div class="chapitre-tag">The portfolio of a small company</div>
+<h2 id="section-12">Five capability groups</h2>
+<div class="tableau"><table class="grid">
+<tr><th>Group</th><th>Use</th><th>Examples (public index)</th><th>Input / output, USD excluding tax per million</th></tr>
+<tr><td>G1</td><td>judgement, deliverable that carries consequences</td><td>Claude Opus 5.5 (57.6), Claude Fable 5.1 (53.4), GPT-6 Astra (52.7)</td><td>4 / 20; 10 / 50; 10 / 50</td></tr>
+<tr><td>G2</td><td>routine production</td><td>Claude Sonnet 5 (38.2), Gemini 3.1 Pro (29.7)</td><td>2 / 10; 2 / 12</td></tr>
+<tr><td>G3</td><td>sorting, extraction, summarising</td><td>Gemini 3.8 Flash (40.9), GPT-5.6 Luna (37.3), GPT-6 Luna (37.3)</td><td>0.75 / 3.75; 0.2 / 1.2; 0.1 / 0.5</td></tr>
+<tr><td>G4</td><td>preparation, classification</td><td>Gemini 3.1 Flash-Lite</td><td>0.25 / 1.5</td></tr>
+<tr><td>G5</td><td>free models and scripts</td><td>Qwen3.8 27B via Groq (33.7), GPT-OSS 120B via Groq (11.6)</td><td>0 on the Free plan</td></tr>
+</table></div>
+<p>Sixty model and access pairs, survey of 28 September 2026; full table in the kit.</p>
+</section>
+<section class="slide" data-chap="The portfolio">
+<div class="chapitre-tag">Reading the index</div>
+<h2 id="section-13">Sixteen index points, a factor of a hundred on the price</h2>
+<div class="cards">
+<div class="card"><div class="q">GPT-6 Luna</div><div class="a">37.3 · 0.1 USD excluding tax</div></div>
+<div class="card"><div class="q">Claude Fable 5.1</div><div class="a">53.4 · 10 USD excluding tax</div></div>
+</div>
+<p>The public index aggregates benchmarks; it ranks models against each other. It does not say whether a model succeeds on <strong class="key">your</strong> question: that is measured, against a reference, on your cases.</p>
+<p class="lead">TD 1 measures five free models on twenty questions. The result per model and per question family is the raw material of your routing rule.</p>
+</section>
+<section class="slide" data-chap="The portfolio">
+<div class="chapitre-tag">The access routes</div>
+<h2 id="section-14">The same model, three ways to pay for it</h2>
+<div class="tableau"><table class="grid">
+<tr><th>Route</th><th>What you pay</th><th>What limits it</th></tr>
+<tr><td>Subscription</td><td>a monthly flat fee, 90 to 100 euros for the offers surveyed</td><td>a quota that refills per time window</td></tr>
+<tr><td>Pay-per-token API access</td><td>each token, at the route's price</td><td>the budget</td></tr>
+<tr><td>Free plan</td><td>nothing</td><td>requests and tokens per minute and per day, models served</td></tr>
+</table></div>
+<p class="lead">A request that can wait is handled on capacity already paid for, when the quota comes back. An urgent request is handled on the available paid route. The service handles this capacity management; the user asks their question.</p>
+</section>
+<section class="slide" data-chap="The portfolio">
+<div class="chapitre-tag">Allocation</div>
+<h2 id="section-15">The resource that is up to the request</h2>
+<p>Giving an addition to a senior engineer yields a correct result, paid at the senior engineer's rate. Giving an expert assessment to an intern yields a fast result, often wrong. <strong class="key">Assigning each request to the resource whose capability matches its difficulty</strong> is an allocation problem, the same as in team management.</p>
+<p class="lead">With models, the rule is written and executed automatically: this is the first skill of the module.</p>
+</section>
+<section class="slide" data-chap="Two decisions">
+<div class="chapitre-tag">Decision 1</div>
+<h2 id="section-16">Routing: the cheapest that remains up to the question</h2>
+<div class="flow">
+<div class="box">request</div><div class="arrow">→</div>
+<div class="box">difficulty, stakes, deadline</div><div class="arrow">→</div>
+<div class="box">eligible models</div><div class="arrow">→</div>
+<div class="box">the cheapest available</div><div class="arrow">→</div>
+<div class="box" style="border-color:var(--accent)"><strong>answer</strong></div>
+</div>
+<ul>
+<li>Quota exhausted and deferrable request: <strong class="key">wait</strong> for the refill.</li>
+<li>Urgency: the available paid route <strong class="key">within the budget</strong>.</li>
+<li>No eligible resource: <strong class="key">abstention</strong>, or handover to a person.</li>
+</ul>
+<p>The rule runs in the background. The user sees a single interface and an answer.</p>
+</section>
+<section class="slide" data-chap="Two decisions">
+<div class="chapitre-tag">Decision 2</div>
+<h2 id="section-17">Cross-checking: the k-of-n quorum</h2>
+<p>When the answer carries consequences, <strong class="key">n</strong> models receive the same question; a value is kept if at least <strong class="key">k</strong> of them return it. Without a majority, the system abstains and says so.</p>
+<div class="cards">
+<div class="card ok"><div class="q">3 models</div><div class="a">101</div></div>
+<div class="card bad"><div class="q">1 model</div><div class="a">103</div></div>
+<div class="card"><div class="q">3-of-4 quorum</div><div class="a">101 kept</div></div>
+</div>
+<p class="lead">The quorum costs n calls instead of one. It is reserved for requests where an error costs more: health, investment, legal decision, amount paid out.</p>
+</section>
+<section class="slide" data-chap="Two decisions">
+<div class="chapitre-tag">Three use cases</div>
+<h2 id="section-18">The same assistant, three configurations</h2>
+<div class="tableau"><table class="grid">
+<tr><th>Use case</th><th>What an error costs</th><th>Configuration</th></tr>
+<tr><td>Internal dashboard, read once a day</td><td>a manual correction</td><td>small model alone</td></tr>
+<tr><td>Figure shown to the customer</td><td>a complaint, a loss of trust</td><td>intermediate model, quorum on disagreement</td></tr>
+<tr><td>Health, investment or legal decision</td><td>harm</td><td>wide quorum, check against a reference, human review</td></tr>
+</table></div>
+<p>The level of checking follows from the cost of an error, never from the available model.</p>
+</section>
+<section class="slide" data-chap="The guiding case">
+<div class="chapitre-tag">The guiding case</div>
+<h2 id="section-19">One shop, three tables, twenty questions</h2>
+<div class="flow">
+<div class="box">revenue question</div><div class="arrow">→</div>
+<div class="box">model: SQL query</div><div class="arrow">→</div>
+<div class="box">read-only execution</div><div class="arrow">→</div>
+<div class="box">value compared with the reference</div><div class="arrow">→</div>
+<div class="box" style="border-color:var(--accent)"><strong>one trace line</strong></div>
+</div>
+<ul>
+<li>SQLite database: 5 products, 59 customers, 221 orders over 397 lines, identical for all sub-groups.</li>
+<li>Twenty questions in three families: period, completed age at a date, product list, and their combinations.</li>
+<li>The reference is the query written by the sub-group, checked with the instructor.</li>
+</ul>
+</section>
+<section class="slide" data-chap="The guiding case">
+<div class="chapitre-tag">The lab session models</div>
+<h2 id="section-20">Five free models to compare</h2>
+<div class="tableau"><table class="grid"><tr><th>Provider</th><th>Exact model identifier</th></tr><tr><td>groq</td><td>openai/gpt-oss-120b</td></tr><tr><td>groq</td><td>openai/gpt-oss-20b</td></tr><tr><td>openrouter</td><td>cohere/north-mini-code:free</td></tr><tr><td>groq</td><td>qwen/qwen3.8-27b</td></tr><tr><td>openrouter</td><td>dots-studio/dots-3-note-preview:free</td></tr></table></div>
+<p>Selection of 14 October 2026. The lab session calls target these five models; the portfolio of sixty is used for reading and calculating.</p>
+</section>
+<section class="slide" data-chap="The guiding case">
+<div class="chapitre-tag">The trace</div>
+<h2 id="section-21">What a trace is</h2>
+<p class="lead">A trace is the structured response to one request: one line per call to a model, retries included, written to <code>traces-td1.csv</code> in 22 columns.</p>
+<div class="tableau"><table class="grid compact">
+<tr><th>Columns</th><th>What they allow</th></tr>
+<tr><td><code>cell_id</code>, <code>provider</code>, <code>model_requested</code>, <code>model_returned</code></td><td>know which resource answered</td></tr>
+<tr><td><code>case_id</code>, <code>question</code>, <code>prompt_sha256</code>, <code>sql</code></td><td>compare with the same prompt</td></tr>
+<tr><td><code>value</code>, <code>reference</code>, <code>verdict</code>, <code>verdict_detail</code></td><td>judge the answer</td></tr>
+<tr><td><code>http_status</code>, <code>error</code>, <code>attempts</code></td><td>tell a model error from a failed access</td></tr>
+<tr><td><code>latency_ms</code>, <code>tokens_prompt</code>, <code>tokens_completion</code>, <code>tokens_reasoning</code>, <code>cost_native</code>, <code>date_utc</code></td><td>quantify</td></tr>
+<tr><td><code>nature</code>: <code>real</code>, <code>replay</code>, <code>simulation</code></td><td>never count a simulation as a measurement</td></tr>
+</table></div>
+</section>
+<section class="slide" data-chap="Assessment">
+<div class="chapitre-tag">Three sessions</div>
+<h2 id="section-22">Compare, cross-check, quantify</h2>
+<div class="tableau"><table class="grid">
+<tr><th>Session</th><th>What the sub-group produces</th></tr>
+<tr><td>TD 1, 21 October</td><td>twenty references, one trace per call on five models, the cause of each failure, the position of each model in the portfolio</td></tr>
+<tr><td>TD 2, 18 November</td><td>the k-of-n vote in the skeleton, a wrong consensus identified, the routing rule written and exercised on a simulator</td></tr>
+<tr><td>TD 3, 11 December</td><td>the table of configurations with their costs, the configuration of a named use case, three slides</td></tr>
+</table></div>
+<p>Hand-in after each session: the sub-group's public Git repository, its commit recorded in Moodle. It holds the references, traces, vote, rule, cost table, slides, prompts as used and demonstration video.</p>
+</section>
+<section class="slide" data-chap="Assessment">
+<div class="chapitre-tag">The mark</div>
+<h2 id="section-23">Nine outcomes, marked in session</h2>
+<div class="tableau"><table class="grid">
+<tr><th>Session</th><th>What is marked</th><th>Points</th></tr>
+<tr><td>TD 1</td><td>reference, traces, cause of a failure</td><td>6</td></tr>
+<tr><td>TD 2</td><td>vote, wrong consensus, routing rule</td><td>6</td></tr>
+<tr><td>TD 3</td><td>costs, decision, limits</td><td>6</td></tr>
+<tr><td>Hand-in</td><td>a repository that can be replayed, a video of the chain</td><td>2</td></tr>
+<tr><td><strong>Sub-group mark</strong></td><td>70 % of the final mark</td><td><strong>20</strong></td></tr>
+<tr><td><strong>Individual quizzes</strong></td><td>one per lab session, mean of the three: 30 % of the final mark</td><td><strong>20</strong></td></tr>
+</table></div>
+<p>Each outcome is worth 0, 1 or 2; the levels are on the Assessment page. Seven members, one sub-group mark. No oral presentation.</p>
+</section>
+<section class="slide" data-chap="The lab session">
+<div class="chapitre-tag">This afternoon</div>
+<h2 id="section-24">TD 1: comparing models on the same questions</h2>
+<div class="tableau"><table class="grid">
+<tr><th>Time</th><th>Step</th><th>Output</th></tr>
+<tr><td>14:00</td><td>environment check, sub-groups, roles</td><td><code>check_access.py</code> all OK</td></tr>
+<tr><td>14:15</td><td>the twenty references, shared out among the members</td><td><code>reference-td1.csv</code></td></tr>
+<tr><td>15:30</td><td>the five models on the twenty questions</td><td><code>traces-td1.csv</code></td></tr>
+<tr><td>16:05</td><td>reading the traces, cause of failures, position in the portfolio</td><td>models × questions table</td></tr>
+<tr><td>17:30</td><td>plenary, then marking of the three outcomes</td><td>session mark</td></tr>
+<tr><td>18:15</td><td>individual quiz on Moodle, fifteen minutes</td><td>quiz mark</td></tr>
+</table></div>
+</section>
+<section class="slide" data-chap="The lab session">
+<div class="chapitre-tag">Before going to the room</div>
+<h2 id="section-25">Sub-groups, roles, environment</h2>
+<ul>
+<li>Sub-groups of <strong class="key">seven</strong>, formed now.</li>
+<li>Roles for the afternoon: reference queries, running the models, keeping the traces, the session report. Roles rotate in TD 2 and 3.</li>
+<li>Each member shows a <code>check_access.py</code> output that is all OK at 14:00.</li>
+</ul>
+<p class="lead">The kit contains the database, the twenty questions, the skeleton, the guide, the portfolio and the three assignments.</p>
+</section>
+</main><footer>Didier Parisot · ESILV · Pack 2026-10-18-students-1.</footer><script>
+(()=>{'use strict';const header=document.querySelector('header'),button=document.getElementById('header-toggle');
+const key='esilv-beta-header:'+location.pathname;let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+function setHeader(collapsed){header.classList.toggle('collapsed',collapsed);button.setAttribute('aria-expanded',String(!collapsed));button.textContent=collapsed?'Expand header':'Collapse header';document.documentElement.style.scrollPaddingTop=(header.offsetHeight+12)+'px';}
+setHeader(saved===null?matchMedia('(max-width:700px)').matches:saved==='collapsed');button.addEventListener('click',()=>{const c=!header.classList.contains('collapsed');setHeader(c);try{localStorage.setItem(key,c?'collapsed':'expanded')}catch(e){}});
+addEventListener('resize',()=>setHeader(header.classList.contains('collapsed')));
+document.querySelectorAll('input[data-check]').forEach(box=>{const k='esilv-beta-review-1:'+location.pathname+':'+box.dataset.check;try{box.checked=localStorage.getItem(k)==='1'}catch(e){}box.addEventListener('change',()=>{try{localStorage.setItem(k,box.checked?'1':'0')}catch(e){}})});
+})();
+</script></body></html>

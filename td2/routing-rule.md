@@ -1,6 +1,6 @@
 # Routing rule of the sub-group (one page)
 
-Source of every choice: TD 1 batch of 2026-10-21, nature `real`, last attempt per cell in `model-question-comparison-en.csv` (cell id = `provider:model:case`). Prices: Groq Developer, 2026-10-05, USD excl. tax per million tokens (input / output). Cost per question: API equivalent measured in `td3/configuration-comparison.csv`. Twenty questions support a hypothesis for this batch, not a general error rate.
+Source of every choice: TD 1 batch of 2026-10-21, nature `real`, last attempt per cell in `td1/model-question-comparison-en.csv` (cell id = `provider:model:case`). Prices: Groq Developer, 2026-10-05, USD excl. tax per million tokens (input / output). Cost per question: API equivalent measured in `td3/configuration-comparison.csv`. Twenty questions support a hypothesis for this batch, not a general error rate.
 
 ## Rule
 
